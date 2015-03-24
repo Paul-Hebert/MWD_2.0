@@ -1,0 +1,331 @@
+/*/////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+    Default
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////*/
+
+*{
+    font-family: Open Sans, sans-serif;
+    box-sizing:border-box;
+}
+
+html{
+    background:#222;
+}
+
+body{
+    background:#f0f0f0;
+    font-family: Open Sans, sans-serif;
+    max-width:1080px;
+    margin:0 auto;
+}
+
+.dark{
+    background:#0C3D56;
+}
+
+.dark *{
+    color:#fff;
+}
+
+a{
+    text-decoration:none;
+}
+
+form, #services, #testimonials{
+    padding-bottom:20px;
+}
+
+h2{
+    font-weight:600;
+    font-size:24pt;
+    margin-bottom:15px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Nav
+//////////////////////////////////////////////////////////////////////////////*/
+
+nav{
+    position:relative;
+
+}
+
+nav *{
+    position:relative;
+}
+
+nav img{
+    top:-14px;
+}
+
+nav h1{
+    font-size:24pt;
+    font-weight: 700;
+    padding-left:10px;
+    top:-12px;
+}
+
+nav a{
+    font-size:12pt;
+    top:-3px;
+}
+
+nav.dark a{
+    color:#ddd;
+}
+
+nav.dark a:hover{
+    color:#fff;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Main
+//////////////////////////////////////////////////////////////////////////////*/
+
+#main *{
+    position:relative;
+}
+
+#main{
+    padding-bottom:50px;
+    height:440px;
+}
+
+#main div.col-7{
+    margin-top:160px;
+}
+
+#main h2{
+    font-size:18pt;
+}
+
+#main div div h2, #main_changer{
+    font-size:48pt;
+    font-weight:700;
+}
+
+#main a{
+    font-size:18pt;
+    background:#0C3D56;
+    color:#fff;
+    padding:5px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -o-border-radius:5px;
+    top:30px;
+
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+#main a:hover{
+    background:#E92828;
+}
+
+svg{
+    transform:scale(.45);
+    transform-origin:0 0;
+    margin:0 auto;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Services
+//////////////////////////////////////////////////////////////////////////////*/
+
+#services{
+    padding-bottom:50px;
+}
+
+#services h3{
+    font-size:24pt;
+    font-weight:600;
+    padding-bottom:10px;
+    width: 150%;
+    position: relative;
+    left: -25%;
+}
+
+#services p{
+    position:relative;
+    width:140%;
+    left:-20%;
+}
+
+#services .col-2 *{
+    text-align: center;
+}
+
+#services .col-2{
+    margin-right:12.5%;
+}
+
+#services .col-2:first-of-type{
+    margin-left: 17.30769230765%;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Testimonials
+//////////////////////////////////////////////////////////////////////////////*/
+
+#testimonials{
+    height:250px;
+    padding-top:60px;
+}
+
+#testimonials div{
+    font-size:14pt;
+    font-style:italic;
+}
+
+#testimonials div:first-of-type{
+    font-size:18pt;
+    padding-bottom:30px;
+}
+
+#testimonials div:nth-of-type(2){
+    font-weight:600;
+    font-style:normal;
+    padding-bottom:4px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Contact
+//////////////////////////////////////////////////////////////////////////////*/
+
+form{
+    padding-bottom: 90px;
+}
+
+form h3{
+    font-size:36pt;
+    font-weight:600;
+    padding-bottom:20px;
+}
+
+form div{
+    position:relative;
+    padding-bottom:20px;
+}
+
+input, textarea{
+    width:100%;
+    z-index:1;
+    position:relative;
+    padding:3px;
+}
+
+textarea{
+    height:250px;
+}
+
+form.dark label{
+    position:absolute;
+    top:6px;
+    color:#999;
+    z-index:2;
+    text-align: left;
+    left:5px;
+    transition: left 300ms ease-in;
+}
+
+form.dark input, form.dark textarea{
+    color:#000;
+}
+
+input[type=submit]{
+    font-size: 16pt;
+    font-weight:600;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -o-border-radius:5px;
+
+    cursor:pointer;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Work
+//////////////////////////////////////////////////////////////////////////////*/
+
+#work .row{
+    padding:10%;
+}
+
+#work .row:nth-of-type(odd) [class^="col-"]{
+    float:right;
+}
+
+#work .row:nth-of-type(even){
+    background:#0C3D56;
+    color:#fff;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Columns 
+//////////////////////////////////////////////////////////////////////////////*/
+
+.row{
+    clear: both;
+    margin: 0 auto;
+    padding-top:30px;
+    overflow:hidden;
+    width:100%;
+    max-width:1080px;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+[class^="col-"] {
+    float: left;
+    margin: 0 3.84615384615% 0 0;
+    list-style: none;
+    position: relative;
+}
+
+[class^="col-"]:last-of-type{
+    margin: 0 0;
+}
+
+.col-1 { width: 4.8076923077% }
+.col-2 { width: 13.4615384615% }
+.col-3 { width: 22.1153846154% }
+.col-4 { width: 30.7692307692% }
+.col-5 { width: 39.4230769231% }
+.col-6 { width: 48.0769230769% }
+.col-7 { width: 56.7307692308% }
+.col-8 { width: 65.3846153846% }
+.col-9 { width: 74.0384615385% }
+.col-10 { width: 82.6923076923% }
+.col-11 { width: 91.3461538462% }
+.col-12 { width: 100%; margin: 0 }
+
+.center{
+    clear:both;
+    margin:0 auto !important;
+    float:none;
+    text-align:center;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+    Responsive
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Phone */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px){
+
+}
+
+/* Tablet */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+}
