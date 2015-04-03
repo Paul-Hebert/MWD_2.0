@@ -7,6 +7,8 @@
 *{
     font-family: Open Sans, sans-serif;
     box-sizing:border-box;
+    position:relative;
+    z-index:1;
 }
 
 html{
@@ -42,13 +44,18 @@ h2{
     margin-bottom:15px;
 }
 
+p{
+    line-height: 130%;
+    padding-bottom:20px;
+}
+
 /*/////////////////////////////////////////////////////////////////////////////
     Nav
 //////////////////////////////////////////////////////////////////////////////*/
 
 nav{
     position:relative;
-
+    border-bottom: 5px #f1f0f0 solid;
 }
 
 nav *{
@@ -87,15 +94,6 @@ nav.dark a:hover{
     position:relative;
 }
 
-#main{
-    padding-bottom:50px;
-    height:440px;
-}
-
-#main div.col-7{
-    margin-top:160px;
-}
-
 #main h2{
     font-size:18pt;
 }
@@ -115,21 +113,20 @@ nav.dark a:hover{
     -o-border-radius:5px;
     top:30px;
 
-    -webkit-transition: background-color 500ms linear;
-    -moz-transition: background-color 500ms linear;
-    -o-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+    -webkit-transition: background-color 500ms ease-in-out;
+    -moz-transition: background-color 500ms ease-in-out;
+    -o-transition: background-color 500ms ease-in-out;
+    -ms-transition: background-color 500ms ease-in-out;
+    transition: background-color 500ms ease-in-out;
 }
 
 #main a:hover{
     background:#E92828;
 }
 
-svg{
+#main svg{
     transform:scale(.45);
     transform-origin:0 0;
-    margin:0 auto;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -149,12 +146,6 @@ svg{
     left: -25%;
 }
 
-#services p{
-    position:relative;
-    width:140%;
-    left:-20%;
-}
-
 #services .col-2 *{
     text-align: center;
 }
@@ -163,9 +154,6 @@ svg{
     margin-right:12.5%;
 }
 
-#services .col-2:first-of-type{
-    margin-left: 17.30769230765%;
-}
 
 /*/////////////////////////////////////////////////////////////////////////////
     Testimonials
@@ -225,11 +213,12 @@ textarea{
 form.dark label{
     position:absolute;
     top:6px;
-    color:#999;
+    color:#444;
     z-index:2;
     text-align: left;
     left:5px;
-    transition: left 300ms ease-in;
+    transition: left 300ms ease-in-out, color 300ms ease-in-out;
+    cursor:text;
 }
 
 form.dark input, form.dark textarea{
@@ -244,6 +233,11 @@ input[type=submit]{
     -o-border-radius:5px;
 
     cursor:pointer;
+    transition:color 300ms ease-in-out;
+}
+
+input[type=submit]:hover{
+    color:#e82a2a;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -251,16 +245,34 @@ input[type=submit]{
 //////////////////////////////////////////////////////////////////////////////*/
 
 #work .row{
-    padding:10%;
-}
-
-#work .row:nth-of-type(odd) [class^="col-"]{
-    float:right;
+    padding:90px;
+    padding-left:4.8076923077%;
+    padding-right:4.8076923077%;
 }
 
 #work .row:nth-of-type(even){
     background:#0C3D56;
     color:#fff;
+}
+
+.workExample{
+    border:#0C3D56 solid 5pt;
+    opacity:.8;
+    transition:opacity 300ms ease-in-out;
+}
+
+.workExample:hover{
+    opacity:1;
+}
+
+.row:nth-of-type(even) .workExample{
+    border:#fff solid 5pt;
+}
+
+.disclaimer{
+    width:66%;
+    margin:0 auto;
+    top:40%;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -316,16 +328,126 @@ input[type=submit]{
 //////////////////////////////////////////////////////////////////////////////*/
 
 
-/* Phone */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px){
-
+@media (max-width : 1000px){
+    #main svg{
+        transform:scale(.4);
+    }
 }
 
-/* Tablet */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
+@media (max-width : 850px){
+    #main svg{
+        transform:scale(.3);
+    }
+}
 
+@media (min-width : 601px){
+    #main{
+        padding-bottom:50px;
+        height:440px;
+    }
+
+    #main .col-7{
+        padding-top:160px;
+    }
+}
+
+@media (max-width : 600px){
+    .stretch-12{
+        width:95%;
+        margin: 0 auto;
+    }
+
+    .desktop{
+        display:none;
+    }
+
+    #testimonials{
+        height:300px;
+    }
+
+    .ham{
+        transition: fill 500ms ease-in-out;
+        fill:#fff;
+    }
+
+    .svg_holder{
+        position:absolute;
+        top:-11px;
+        right:25px;
+    }
+
+    nav{
+        transition:max-height 500ms ease-in-out;
+        max-height:62px;
+        position:absolute;
+        z-index:2;
+    }
+
+    nav h1{
+        font-size:16pt;
+    }
+
+    nav .stretch-12{
+        font-size:14pt;
+        text-align:center;
+        padding-top:8px;
+        margin-top:12px;
+        border-top:1px #ccc solid;
+        padding-bottom:8px;
+        width:100%;
+    }
+
+    nav .stretch-12:last-of-type{
+        margin-top:12px;
+        padding-bottom:20px;
+    }
+
+    #services .stretch-12 img{
+        width:50%;
+        margin-left:25%;
+    }
+
+    #main{
+        height:260px;
+    }
+
+    #main .col-7{
+        padding-top:60px;
+    }
+
+    #main div div h2, #main_changer{
+        font-size:30pt;
+    }
+
+    #main svg{
+        transform:scale(.25);
+        top:25px;
+        height:100px;
+        overflow:visible;
+    }
+
+    form.row{
+        padding-top:75px;
+    }
+}
+
+@media (min-width : 601px){
+    #services .col-2:first-of-type{
+        margin-left: 17.30769230765%;
+    }  
+
+    #services p{
+        position:relative;
+        width:140%;
+        left:-20%;
+    } 
+
+    #work .row:nth-of-type(even) [class^="col-"]{
+        float:right;
+        text-align: right;
+    }
+
+    .mobile{
+        display:none;
+    }
 }

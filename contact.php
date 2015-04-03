@@ -4,7 +4,7 @@
 	<head>
     	<meta charset="utf-8"> 
 
-		<title>Default</title>
+		<title>Contact | Mild West Designs</title>
 
 		<?php include('php/resources.php'); ?>
 	</head>

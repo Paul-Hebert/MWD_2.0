@@ -1,15 +1,15 @@
 testimonials = [
-					['Paul went above and beyond in working hard to understand my web design needs . . . and he made the process easy and fun to be involved in.','- Anna Garzon,','Wildflour Bakery'],
-					['Able to really embrace my ideas and make them a reality . . . I highly recommend his work . . . Paul is professional and his work is amazing.','- Sam Steyer,','The Pour House'],
-					['Very original and creative. I love working with him as he always gives me many directions to choose from . . . the designs are interesting and fresh.','- Nicholas Huang,','Impurity Bike Co.'],
-					['As a small business I was very lucky to have Paul work for me . . . I would recommend Paul to anyone!','- Dann Rogers,','Musician']
+					['Paul went above and beyond in working hard to understand my web design needs &#8230; and he made the process easy and fun to be involved in.','- Anna Garzon,','Wildflour Bakery'],
+					['Able to really embrace my ideas and make them a reality &#8230; I highly recommend his work &#8230; Paul is professional and his work is amazing.','- Sam Steyer,','The Pour House'],
+					['Very original and creative. I love working with him as he always gives me many directions to choose from &#8230; the designs are interesting and fresh.','- Nicholas Huang,','Impurity Bike Co.'],
+					['As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!','- Dann Rogers,','Musician']
 				];
 
 main = [
 			['Websites','#websites'],
-			['Brands','#branding']/*,
-			['Businesses','#websites'],
-			['Relationships','#websites']*/
+			['Brands','#branding'],
+			['Businesses','#businesses'],
+			['Relationships','#relationships']
 		];
 
 testi_val = 0;
@@ -22,21 +22,30 @@ svg_duration = 2000;
 
 cph_changed = false;
 
+main_frequency = 4500;
 
+testi_frequency = 4500;
+
+toggleVal = false;
 
 $(function() {
 	$('form div *').click( function(){
 		if (! $(this).parent().hasClass('toggled')){
 			$(this).parent().addClass('toggled');
-			$(this).parent().children('label').css('left','-90px');
+			$(this).parent().children('label').css({
+														'left' : '-90px',
+														'color' : '#ddd'
+													});
 			$(this).parent().children('input, textarea').focus();	
 		}
 	})
 
-	draw_svg( $('#websites path') );
+	if ($(window).width() > 600){
+		draw_svg( $('#websites path') );
+	}
 
-    setInterval( "switch_main()", 4000 );
-    setInterval( "switch_testimonials()", 4000 );
+    setInterval( "switch_main()", main_frequency );
+    setInterval( "switch_testimonials()", testi_frequency );
 });
 
 
@@ -51,7 +60,10 @@ function switch_main(){
 
 	$('#main_changer').animate({'opacity':0}, duration, function(){
 		$('#main_changer').text(main[main_val][0]).animate({'opacity':1},duration);
-		draw_svg( $(main[main_val][1] + ' path') );
+
+		if ($(window).width() > 600){
+			draw_svg( $(main[main_val][1] + ' path') );
+		}
 	});
 
 	main_val++;
@@ -129,5 +141,17 @@ function websiteChanged(target){
 		cph_changed = true;
 	} else{
 		window.open("cph_newest/");
+	}
+}
+
+function toggle(){
+	if (toggleVal == false){
+		$('nav').css('max-height','333px');
+		$('.ham:first-of-type, .ham:last-of-type').css('fill','#0C3D56');
+		toggleVal = true;
+	} else{
+		$('nav').css('max-height','64px');
+		$('.ham:first-of-type, .ham:last-of-type').css('fill','#fff');
+		toggleVal = false;
 	}
 }
