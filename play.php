@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
 
 <html>
 	<head>
-    	<meta charset="utf-8"> 
+		<?php include('php/resources.php'); ?>
 
 		<title>Play | Mild West Designs</title>
-
-		<?php include('php/resources.php'); ?>
 	</head>
 
 	<body>
@@ -14,8 +12,8 @@
 
 		<div id="work">
 			<div class="row">
-				<a href="gridley/" target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" src="imgs/thumbs/gridley.png"/>
+				<a href="../gridley/" target="_blank" class="col-7 workExample stretch-12">
+					<img class="col-12"  alt="Gridley Grid Generator screenshot" src="imgs/thumbs/gridley.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>									
@@ -25,7 +23,7 @@
 						Gridley Grid Generator
 					</h2>
 					<p>
-						A tool I built to help web designers generate custom CSS grid systems.
+						A tool we built to help web designers generate custom CSS grid systems.
 					</p>
 				</div>
 			</div>	
@@ -34,8 +32,8 @@
 
 
 			<div class="row">
-				<a href="http://www.paulhebertdesigns.com/game_redesign/" target= "_blank" class="col-7 workExample stretch-12">					
-					<img class="col-12" src="imgs/thumbs/game.png"/>
+				<a href="../game_redesign/" target= "_blank" class="col-7 workExample stretch-12">					
+					<img class="col-12"  alt="Pluto's Reveng screenshot" src="imgs/thumbs/game.png"/>
 				</a>		
 
 				<div class="col-1 big">&nbsp;</div>	
@@ -57,8 +55,8 @@
 
 
 			<div class="row">
-				<a href="web_colors/" target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" src="imgs/thumbs/web_colors.png"/>
+				<a href="../web_colors/" target="_blank" class="col-7 workExample stretch-12">
+					<img class="col-12"  alt="Colors of the Web screenshot" src="imgs/thumbs/web_colors.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>									
@@ -79,8 +77,8 @@
 
 
 			<div class="row">
-				<a href="http://www.paulhebertdesigns.com/personal_activity_tracker/" target= "_blank" class="col-7 workExample stretch-12">					
-					<img class="col-12" src="imgs/thumbs/p_a_t.png"/>
+				<a href="../personal_activity_tracker/" target= "_blank" class="col-7 workExample stretch-12">					
+					<img class="col-12" alt="Personal Activity Tracker screenshot"  src="imgs/thumbs/p_a_t.png"/>
 				</a>		
 
 				<div class="col-1 big">&nbsp;</div>	
@@ -101,7 +99,7 @@
 
 			<div class="row">
 				<a href="http://www.grubaholics.com"  target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" src="imgs/thumbs/grub.png"/>
+					<img class="col-12" alt="Grubaholics screenshot" src="imgs/thumbs/grub.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>	

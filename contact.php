@@ -2,16 +2,14 @@
 
 <html>
 	<head>
-    	<meta charset="utf-8"> 
+		<?php include('php/resources.php'); ?>
 
 		<title>Contact | Mild West Designs</title>
-
-		<?php include('php/resources.php'); ?>
 	</head>
 
 	<body>
 		<?php include('php/header.php') ?>
 
-		<?php include('php/contact_form.php') ?>
+		<?php include('php/contact_form2.php') ?>
 	</body>
 </html>

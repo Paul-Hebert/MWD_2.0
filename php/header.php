@@ -1,6 +1,6 @@
 <nav class="dark row">
 	<a href="index.php">
-		<img src="imgs/logo.png" class="col-1 desktop"/>
+		<img src="imgs/logo.png" alt="My logo" class="col-1 desktop"/>
 		<h1 class="col-8">Mild West Designs</h1>
 	</a>
 

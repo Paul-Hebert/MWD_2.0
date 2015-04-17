@@ -1,54 +1,93 @@
-testimonials = [
+/*/////////////////////////////////////////////////////////////////////////////
+    Vars and Arrays
+//////////////////////////////////////////////////////////////////////////////*/
+
+var testimonials = [
 					['Paul went above and beyond in working hard to understand my web design needs &#8230; and he made the process easy and fun to be involved in.','- Anna Garzon,','Wildflour Bakery'],
 					['Able to really embrace my ideas and make them a reality &#8230; I highly recommend his work &#8230; Paul is professional and his work is amazing.','- Sam Steyer,','The Pour House'],
 					['Very original and creative. I love working with him as he always gives me many directions to choose from &#8230; the designs are interesting and fresh.','- Nicholas Huang,','Impurity Bike Co.'],
-					['As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!','- Dann Rogers,','Musician']
+					['As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!','- Dann Rogers,','Musician']/*,
+					['A really strong contributor &#8230; [he is] consistently producing great work.','- Debra Johnson,','Tehama Group Communications'],
+					['Very good and driven &#8230; [he came] up with an excellent website &#8230; and designed a logo I loved.','- Bob Tolar,','Pixel Perfect LED']*/
 				];
 
-main = [
+var main = [
 			['Websites','#websites'],
 			['Brands','#branding'],
 			['Businesses','#businesses'],
 			['Relationships','#relationships']
 		];
 
-testi_val = 0;
+var testi_val = 0;
 
-main_val = 0;
+var main_val = 0;
 
-duration = 800;
+var duration = 800;
 
-svg_duration = 2000;
+var svg_duration = 2000;
 
-cph_changed = false;
+var stroke_width = '3pt';
 
-main_frequency = 4500;
+var cph_changed = false;
 
-testi_frequency = 4500;
+var main_frequency = 4500;
 
-toggleVal = false;
+var testi_frequency = 4500;
+
+var toggleVal = false;
+
+if(GetIEVersion() > 0){
+	ie = true;
+} else{
+	ie = false;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Set-Up on load
+//////////////////////////////////////////////////////////////////////////////*/
 
 $(function() {
-	$('form div *').click( function(){
+	load_svgs();
+
+	/*$('form div *').click( function(){
 		if (! $(this).parent().hasClass('toggled')){
 			$(this).parent().addClass('toggled');
 			$(this).parent().children('label').css({
-														'left' : '-90px',
-														'color' : '#ddd'
-													});
+													'left' : '-90px',
+													'color' : '#ddd'
+												});
 			$(this).parent().children('input, textarea').focus();	
 		}
-	})
+	})*/
 
-	if ($(window).width() > 600){
-		draw_svg( $('#websites path') );
-	}
+	$('input').focus( function(){
+		inputSelect($(this),$(this).val());
+	});
+	$('textarea').focus( function(){
+		textSelect($(this),$(this).text());
+	});
 
     setInterval( "switch_main()", main_frequency );
     setInterval( "switch_testimonials()", testi_frequency );
 });
 
 
+/*/////////////////////////////////////////////////////////////////////////////
+    Functions
+//////////////////////////////////////////////////////////////////////////////*/
+
+function load_svgs(){
+	if (screen.width > 700){
+		if (ie === false){
+			$("#main .col-5").load("php/svgs.php", function(){
+				draw_svg( $('#websites path') );
+			});
+		} else{
+			$("#main .col-5").load("php/pngs.php");			
+		}
+	}
+}
 
 function switch_fields(){
 	switch_main();
@@ -61,8 +100,12 @@ function switch_main(){
 	$('#main_changer').animate({'opacity':0}, duration, function(){
 		$('#main_changer').text(main[main_val][0]).animate({'opacity':1},duration);
 
-		if ($(window).width() > 600){
-			draw_svg( $(main[main_val][1] + ' path') );
+		if ($(window).width() > 700){
+			if (ie === false){
+				draw_svg( $(main[main_val][1] + ' path') );
+			} else{
+				draw_png( $(main[main_val][1]) );
+			}
 		}
 	});
 
@@ -89,27 +132,36 @@ function switch_testimonials(){
 }
 
 function draw_svg(path_array){
-	$('path').css('opacity','0');
+	$('path').css('opacity','0.0');
 	for(x=0; x < path_array.length; x++){
 		path = path_array[x];
 		var length = path.getTotalLength();
 		// Clear any previous transition
 		path.style.opacity = '1';
-		path.style.transition = path.style.WebkitTransition =
+		path.style.transition = path.style.WebkitTransition = path.style.msTransition = path.style.OTransition = 
 		  'none';
 		// Set up the starting positions
 		path.style.strokeDasharray = length + ' ' + length;
 		path.style.strokeDashoffset = length;
-		path.style.strokeWidth = '2pt';
+		path.style.strokeWidth = stroke_width;
 		// Trigger a layout so styles are calculated & the browser
 		// picks up the starting position before animating
 		path.getBoundingClientRect();
 		// Define our transition
-		path.style.transition = path.style.WebkitTransition =
-		  'stroke-dashoffset ' + svg_duration + 'ms ease-in-out';
+		path.style.transition = path.style.WebkitTransition = path.style.msTransition = path.style.OTransition = 
+			'stroke-dashoffset ' + duration + 'ms ease-in-out';
 		// Go!
 		path.style.strokeDashoffset = '0';
 	}
+}
+
+function draw_png(id){
+	$('#main img').each( function(){
+		if( $(this).css('display') === 'block' || 'inline'){
+			$(this).fadeOut();
+		}
+	});
+	$(id).fadeIn();
 }
 
 function shrink_svg(path_array){
@@ -117,7 +169,7 @@ function shrink_svg(path_array){
 		path = path_array[x];
 		var length = path.getTotalLength();
 		// Clear any previous transition
-		path.style.transition = path.style.WebkitTransition =
+		path.style.transition = path.style.WebkitTransition = path.style.msTransition = path.style.OTransition = 
 		  'none';
 		// Set up the starting positions
 		path.style.strokeDasharray = length + ' ' + length;
@@ -125,8 +177,8 @@ function shrink_svg(path_array){
 		// picks up the starting position before animating
 		path.getBoundingClientRect();
 		// Define our transition
-		path.style.transition = path.style.WebkitTransition =
-		  'stroke-dashoffset ' + duration + 'ms ease-in-out';
+		path.style.transition = path.style.WebkitTransition = path.style.msTransition = path.style.OTransition = 
+			'stroke-dashoffset ' + duration + 'ms ease-in-out';
 		// Go!
 		path.style.strokeDashoffset = length;
 	}
@@ -137,7 +189,7 @@ function shrink_svg(path_array){
 function websiteChanged(target){
 	if (cph_changed == false){
 		var switchHeight = $('#' + target).height();
-		$('#' + target).html('<h4 class="disclaimer">The Pour House recently switched to a new website. To view an archived copy of the site we designed for them, click here.</h4>').css('color','#000').css('height',switchHeight);
+		$('#' + target).html('<h4 class="disclaimer">The Pour House recently switched to a new website. To view an archived copy of the site we designed for them, click here.</h4>').css({'color':'#000','background':'#fff'}).css('height',switchHeight);
 		cph_changed = true;
 	} else{
 		window.open("cph_newest/");
@@ -155,3 +207,27 @@ function toggle(){
 		toggleVal = false;
 	}
 }
+
+function inputSelect(identifier,defaultV){
+	if (identifier.val() == defaultV){
+		identifier.attr('value','');
+	}
+}
+
+
+function textSelect(identifier,defaultV){
+	if (identifier.text() == defaultV){
+		identifier.text('');
+	}
+}
+
+function GetIEVersion() {
+	  var sAgent = window.navigator.userAgent;
+	  var Idx = sAgent.indexOf("MSIE");
+	  if (Idx > 0)
+	    return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+	  else if (!!navigator.userAgent.match(/Trident\/7\./))
+	    return 11;
+	  else
+	    return 0;
+	}
