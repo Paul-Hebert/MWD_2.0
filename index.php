@@ -61,14 +61,14 @@
 
 		<div id="testimonials" class="row">
 			<div class="col-6 center stretch-12">
-				&ldquo;Very good and driven &#8230; [he came] up with an excellent website &#8230; and designed a logo I loved.&rdquo;
+				&ldquo;As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!&rdquo;
 
 			</div>
 			<div class="col-6 center stretch-12">
-				- Bob Tolar,
+				- Dann Rogers,
 			</div>
 			<div class="col-6 center stretch-12">
-				Pixel Perfect LED
+				Musician
 			</div>
 		</div>
 

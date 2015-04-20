@@ -12,7 +12,7 @@
 
 				<div class="contactHolder stretch-12">
 					<img src="imgs/envelope.png" class="desktop"/>
-					<form class="contactForm" method="post" action="mailto.php" id="content" enctype="multipart/form-data">
+					<form class="contactForm" method="post" action="php/mailto.php" id="content" enctype="multipart/form-data">
 						<div class="row">
 							<label class="col-3 stretch-12" for="name">Name:</label>
 							<input type="text" name="name" id="name" class="col-8 stretch-12" value="John Doe"/>

@@ -1,4 +1,4 @@
-https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -12,7 +12,7 @@ https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
 
 		<div id="work">
 			<div class="row">
-				<a href="../gridley/" target="_blank" class="col-7 workExample stretch-12">
+				<a href="gridley/" target="_blank" class="col-7 workExample stretch-12">
 					<img class="col-12"  alt="Gridley Grid Generator screenshot" src="imgs/thumbs/gridley.png"/>
 				</a>	
 
@@ -32,7 +32,7 @@ https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
 
 
 			<div class="row">
-				<a href="../game_redesign/" target= "_blank" class="col-7 workExample stretch-12">					
+				<a href="game_redesign/" target= "_blank" class="col-7 workExample stretch-12">					
 					<img class="col-12"  alt="Pluto's Reveng screenshot" src="imgs/thumbs/game.png"/>
 				</a>		
 
@@ -55,7 +55,7 @@ https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
 
 
 			<div class="row">
-				<a href="../web_colors/" target="_blank" class="col-7 workExample stretch-12">
+				<a href="web_colors/" target="_blank" class="col-7 workExample stretch-12">
 					<img class="col-12"  alt="Colors of the Web screenshot" src="imgs/thumbs/web_colors.png"/>
 				</a>	
 
@@ -77,7 +77,7 @@ https://news.ycombinator.com/item?id=2262527<!DOCTYPE html>
 
 
 			<div class="row">
-				<a href="../personal_activity_tracker/" target= "_blank" class="col-7 workExample stretch-12">					
+				<a href="personal_activity_tracker/" target= "_blank" class="col-7 workExample stretch-12">					
 					<img class="col-12" alt="Personal Activity Tracker screenshot"  src="imgs/thumbs/p_a_t.png"/>
 				</a>		
 

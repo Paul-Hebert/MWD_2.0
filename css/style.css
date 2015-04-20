@@ -201,88 +201,10 @@ form{
     padding-bottom: 90px;
 }
 
-form h3{
-    font-size:36pt;
-    font-weight:600;
-    padding-bottom:20px;
-}
-
 form div{
     position:relative;
     padding-bottom:20px;
 }
-
-input, textarea{
-    width:100%;
-    z-index:1;
-    position:relative;
-    padding:3px;
-}
-
-textarea{
-    height:250px;
-}
-/*
-form.dark label{
-    position:absolute;
-    top:6px;
-    color:#444;
-    z-index:2;
-    text-align: left;
-    left:5px;
-    transition: left 300ms ease-in-out, color 300ms ease-in-out;
-    cursor:text;
-}
-
-form.dark input, form.dark textarea{
-    color:#000;
-}
-
-input[type=submit]{
-    font-size: 16pt;
-    font-weight:600;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -o-border-radius:5px;
-
-    cursor:pointer;
-    transition:color 300ms ease-in-out;
-}
-
-input[type=submit]:hover{
-    color:#e82a2a;
-}
-
-
-.form2{
-    margin-bottom: 100px;
-}
-
-.form2 div.center:first-of-type input{
-    margin-top:80px;
-}
-
-.form2 textarea{
-    height:150px;
-    background:url('../imgs/dash.png');
-    line-height:125%;
-    text-indent:19%;
-}
-
-.form2 img{
-    width:66%;
-    margin-left:16.6%;
-    position:absolute;
-}
-
-.form2 input, .form2 textarea{
-    border:none;
-    border-bottom:2px dashed #0A3E57;
-    color:#564F4D;
-    font-size:20px;
-    padding-top:5px;
-}
-*/
 
 .contact h3{
     font-size:36pt;
@@ -310,6 +232,7 @@ label{
 
 label, input, textarea{
     font-size:20px;
+    padding:3px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -329,7 +252,6 @@ label, input, textarea{
 
 .workExample{
     border:#0C3D56 solid 5pt;
-    opacity:.8;
     transition:opacity 300ms ease-in-out;
 }
 
@@ -564,6 +486,10 @@ label, input, textarea{
         left:20%;
         top:-30px;
     }
+
+    .workExample{
+        opacity:.8;
+    }
 }
 
 
@@ -648,6 +574,10 @@ label, input, textarea{
 
     form.row{
         padding-top:75px;
+    }
+
+    .contact{
+        padding-top:60px;
     }
 }
 
