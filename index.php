@@ -73,7 +73,9 @@
 		</div>
 
 		<?php
-			include('php/contact_form2.php')
+			include('php/contact_form2.php');
+			include('php/footer.php');
+			include('php/scripts.php');
 		?>
 	</body>
 </html>

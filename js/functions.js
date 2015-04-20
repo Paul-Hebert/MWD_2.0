@@ -50,16 +50,11 @@ if(GetIEVersion() > 0){
 $(function() {
 	load_svgs();
 
-	/*$('form div *').click( function(){
-		if (! $(this).parent().hasClass('toggled')){
-			$(this).parent().addClass('toggled');
-			$(this).parent().children('label').css({
-													'left' : '-90px',
-													'color' : '#ddd'
-												});
-			$(this).parent().children('input, textarea').focus();	
-		}
-	})*/
+	$('#arrow').click( function(){
+		$('html, body').animate({
+		    scrollTop: $("body").offset().top
+		}, 300);
+	});
 
 	$('input').focus( function(){
 		inputSelect($(this),$(this).val());

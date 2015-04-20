@@ -104,5 +104,10 @@
 				</div>
 			</div>
 		</div>
+
+		<?php
+			include('php/footer.php');
+			include('php/scripts.php');
+		?>
 	</body>
 </html>
