@@ -5,6 +5,7 @@
 		<?php include('php/resources.php'); ?>
 
 		<title>Contact | Mild West Designs</title>
+		<META NAME="Description" CONTENT="Got a project you need help with? Get in touch with Mild West Designs."/>
 	</head>
 
 	<body>

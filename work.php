@@ -5,12 +5,13 @@
 		<?php include('php/resources.php'); ?>
 
 		<title>Work | Mild West Designs</title>
+		<META NAME="Description" CONTENT="Here at Mild West Designs we're proud to work with local Chico businesses. Check out some of our recent work."/>
 	</head>
 
 	<body>
 		<?php include('php/header.php') ?>
 
-		<div id="work">
+		<div id="work">	
 			<div class="row">
 				<a href="http://www.picturethisphotos.us" target="_blank" class="col-7 workExample stretch-12">
 					<img class="col-12"  alt="Picture This screenshot" src="imgs/thumbs/picturethis.png"/>
@@ -26,26 +27,26 @@
 						This custom-built e-commerce site was developed to allow my client to sell photography online. The site has a simple interface for uploading new photos, changing prices, and accurately calculating shipping rates.
 					</p>
 				</div>
-			</div>		
+			</div>	
 
 
 
 			<div class="row">
-				<a href="javascript:websiteChanged('cph');" class="col-7 workExample stretch-12" id="cph">
-					<img class="col-12"  alt="Pour House screenshot" src="imgs/thumbs/cph.png"/>
+				<a href="http://www.pixelperfectled.com" target="_blank" class="col-7 workExample stretch-12">
+					<img class="col-12"  alt="Pixel Perfect screenshot" src="imgs/thumbs/pixel.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>	
-								
+
 				<div class="col-4 stretch-12">
 					<h2>
-						The Pour House
+						Pixel Perfect LED
 					</h2>
 					<p>
-						This site helps bring customers to the Pour House by making it easy for them to find their location, menu and deals.
+						Pixel Perfect LED specializes in renting out the latest LED technology. We developed a brand and visual identity for the company as well as a custom Wordpress theme that allows them to edit their site themselves.
 					</p>
 				</div>
-			</div>
+			</div>		
 
 
 
@@ -81,6 +82,25 @@
 					</h2>
 					<p>
 						An e-commerce site selling high quality, hand decorated skateboard decks. Board in Hand sells decks as art pieces as well as complete decks that are ready to ride!
+					</p>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<a href="javascript:websiteChanged('cph');" class="col-7 workExample stretch-12" id="cph">
+					<img class="col-12"  alt="Pour House screenshot" src="imgs/thumbs/cph.png"/>
+				</a>	
+
+				<div class="col-1 big">&nbsp;</div>	
+								
+				<div class="col-4 stretch-12">
+					<h2>
+						The Pour House
+					</h2>
+					<p>
+						This site helps bring customers to the Pour House by making it easy for them to find their location, menu and deals.
 					</p>
 				</div>
 			</div>

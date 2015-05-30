@@ -5,15 +5,13 @@
 		<?php include('php/resources.php'); ?>
 
 		<title>Mild West Designs</title>
+		<META NAME="Description" CONTENT="Mild West Designs is a small graphic design and web development firm based out of Chico, CA."/>
 	</head>
 
 	<body>
 		<?php include('php/header.php') ?>
 
 		<div id="main" class="row">
-			<div class="col-5 desktop">
-			</div>
-
 			<div class="col-7 stretch-12">
 					<h2 class="center">
 						We Build 
@@ -24,6 +22,9 @@
 				<div class="center">
 					<a href="contact.php">Request a Quote</a>
 				</div>
+			</div>
+			
+			<div class="col-5 desktop">
 			</div>
 		</div>
 
