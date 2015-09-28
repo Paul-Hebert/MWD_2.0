@@ -61,7 +61,9 @@
 		</div>
 
 		<div id="testimonials" class="row">
-			<div class="col-6 center stretch-12">
+			<span class="testimonial_arrow left"><</span>
+			<span class="testimonial_arrow right">></span>
+			<div class="col-6 center stretch-12" id="quote">
 				&ldquo;As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!&rdquo;
 
 			</div>

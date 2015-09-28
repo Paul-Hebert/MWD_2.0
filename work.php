@@ -89,25 +89,6 @@
 
 
 			<div class="row">
-				<a href="javascript:websiteChanged('cph');" class="col-7 workExample stretch-12" id="cph">
-					<img class="col-12"  alt="Pour House screenshot" src="imgs/thumbs/cph.png"/>
-				</a>	
-
-				<div class="col-1 big">&nbsp;</div>	
-								
-				<div class="col-4 stretch-12">
-					<h2>
-						The Pour House
-					</h2>
-					<p>
-						This site helps bring customers to the Pour House by making it easy for them to find their location, menu and deals.
-					</p>
-				</div>
-			</div>
-
-
-
-			<div class="row">
 				<a href="http://www.impuritybike.com/cos/o.x?c=/qql_ibike/eshop&ptid=3000182&func=viewProds&pid=149&cid=42" target="_blank" class="col-7 workExample stretch-12">
 					<img class="col-12"  alt="Impurity Bike Co. screenshot" src="imgs/thumbs/impurity.jpg"/>
 				</a>	
@@ -120,6 +101,25 @@
 					</h2>
 					<p>
 						By creating engraved designs for bike frames, as well as stickers and t-shirts for Impurity Bike Co., we helped to make their brand more visible and bring more customers to their company.
+					</p>
+				</div>
+			</div>
+
+
+
+			<div class="row">
+				<a href="javascript:websiteChanged('cph');" class="col-7 workExample stretch-12" id="cph">
+					<img class="col-12"  alt="Pour House screenshot" src="imgs/thumbs/cph.png"/>
+				</a>	
+
+				<div class="col-1 big">&nbsp;</div>	
+								
+				<div class="col-4 stretch-12">
+					<h2>
+						The Pour House
+					</h2>
+					<p>
+						This site helps bring customers to the Pour House by making it easy for them to find their location, menu and deals.
 					</p>
 				</div>
 			</div>

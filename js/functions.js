@@ -50,6 +50,18 @@ if(GetIEVersion() > 0){
 $(function() {
 	load_svgs();
 
+	set_click_events();
+
+    setInterval( "switch_main()", main_frequency );
+    testimonial_timer = setInterval( "switch_testimonials()", testi_frequency );
+});
+
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Functions
+//////////////////////////////////////////////////////////////////////////////*/
+
+function set_click_events(){
 	$('#arrow').click( function(){
 		$('html, body').animate({
 		    scrollTop: $("body").offset().top
@@ -63,14 +75,14 @@ $(function() {
 		textSelect($(this),$(this).text());
 	});
 
-    setInterval( "switch_main()", main_frequency );
-    setInterval( "switch_testimonials()", testi_frequency );
-});
+	$('.left').click( function(){
+		manually_switch_testimonials(-2);
+	});
 
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Functions
-//////////////////////////////////////////////////////////////////////////////*/
+	$('.right').click( function(){
+		manually_switch_testimonials(0);
+	});
+}
 
 function load_svgs(){
 	if (screen.width > 700){
@@ -112,11 +124,11 @@ function switch_main(){
 }
 
 function switch_testimonials(){
-	$('#testimonials div').animate({'opacity':0}, duration, function(){
+	$('#testimonials div').fadeOut(duration, function(){
 		$('#testimonials div:nth-of-type(1)').html('\u201c' + testimonials[testi_val][0] + '\u201d');
 		$('#testimonials div:nth-of-type(2)').text(testimonials[testi_val][1]);
 		$('#testimonials div:nth-of-type(3)').text(testimonials[testi_val][2]);
-		$('#testimonials div').animate({'opacity':1},duration);
+		$('#testimonials div').fadeIn(duration);
 	});
 
 	testi_val++;
@@ -125,6 +137,21 @@ function switch_testimonials(){
 		testi_val = 0;
 	}
 }
+
+function manually_switch_testimonials(num){
+	clearInterval(testimonial_timer);
+
+	testi_val += num;
+	switch_testimonials();
+
+	if (testi_val >= testimonials.length){
+		testi_val = 0;
+	} else if( testi_val < 0){
+		testi_val = testimonials.length - 1;
+	}
+}
+
+
 
 function draw_svg(path_array){
 	$('path').css('opacity','0.0');

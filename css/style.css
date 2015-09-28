@@ -234,7 +234,7 @@ path{
 //////////////////////////////////////////////////////////////////////////////*/
 
 #testimonials{
-    height:250px;
+    height:280px;
     padding-top:60px;
 }
 
@@ -246,6 +246,7 @@ path{
 #testimonials div:first-of-type{
     font-size:18pt;
     padding-bottom:30px;
+    line-height:140%;
 }
 
 #testimonials div:nth-of-type(2){
@@ -590,6 +591,23 @@ input, textarea{
 
     .workExample{
         opacity:.8;
+    }
+
+    .testimonial_arrow{
+        font-size:60pt;
+        color:#ccc;
+        font-weight:800;
+        position:absolute;
+        top:80px;
+        cursor:pointer;
+    }
+
+    .left{
+        left:15%;
+    }
+
+    .right{
+        right:15%;
     }
 }
 

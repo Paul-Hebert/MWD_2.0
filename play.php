@@ -5,7 +5,7 @@
 		<?php include('php/resources.php'); ?>
 
 		<title>Play | Mild West Designs</title>
-		<META NAME="Description" CONTENT="Here at Mild West Designs we love to design and develop in our free time. check out some of our side projects."/>
+		<META NAME="Description" CONTENT="Here at Mild West Designs we love to design and develop in our free time. Check out some of our side projects."/>
 	</head>
 
 	<body>
@@ -115,25 +115,6 @@
 					</p>
 
 				</div>
-			</div>
-
-
-
-			<div class="row">
-				<a href="http://www.grubaholics.com"  target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" alt="Grubaholics screenshot" src="imgs/thumbs/grub.png"/>
-				</a>	
-
-				<div class="col-1 big">&nbsp;</div>	
-
-				<div class="col-4 stretch-12">
-					<h2>
-						Grubaholics
-					</h2>
-					<p>
-						This web app allows users to find, rate, and share recipes from their phone, tablet, or computer.
-					</p>
-				</div>						
 			</div>
 
 
