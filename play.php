@@ -117,21 +117,19 @@
 				</div>
 			</div>
 
-
-
 			<div class="row">
-				<a href="imgs/p3.pdf"  target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" alt="Mke it 100% screenshot" src="imgs/thumbs/p3.png"/>
+				<a href="imgs/p1.pdf"  target="_blank" class="col-7 workExample stretch-12">
+					<img class="col-12" alt="Rhythm screenshot" src="imgs/thumbs/timeline.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>	
 
 				<div class="col-4 stretch-12">
 					<h2>
-						Make it 100%
+						Typographic Timeline
 					</h2>
 					<p>
-						A poster I designed in an attempt to encourage more college students to vote.
+						An interactive timeline showing advances in typographic technology.
 					</p>
 				</div>						
 			</div>
@@ -156,20 +154,19 @@
 			</div>
 
 
-
 			<div class="row">
-				<a href="imgs/p1.pdf"  target="_blank" class="col-7 workExample stretch-12">
-					<img class="col-12" alt="Rhythm screenshot" src="imgs/thumbs/p1.png"/>
+				<a href="imgs/p3.pdf"  target="_blank" class="col-7 workExample stretch-12">
+					<img class="col-12" alt="Mke it 100% screenshot" src="imgs/thumbs/p3.png"/>
 				</a>	
 
 				<div class="col-1 big">&nbsp;</div>	
 
 				<div class="col-4 stretch-12">
 					<h2>
-						Rhythm
+						Make it 100%
 					</h2>
 					<p>
-						An assignment for my college's typography class.
+						A poster I designed in an attempt to encourage more college students to vote.
 					</p>
 				</div>						
 			</div>
