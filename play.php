@@ -118,7 +118,7 @@
 			</div>
 
 			<div class="row">
-				<a href="imgs/p1.pdf"  target="_blank" class="col-7 workExample stretch-12">
+				<a href="typographic_timeline/"  target="_blank" class="col-7 workExample stretch-12">
 					<img class="col-12" alt="Rhythm screenshot" src="imgs/thumbs/timeline.png"/>
 				</a>	
 
