@@ -1,5 +1,12 @@
 @import 'reset';
 
+$background-color:#222;
+$dark-color:#0C3D56;
+$off-white:#ffffff;
+$accent-1:#70BBA8;
+$accent-2:#F5885F;
+
+
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
     General
@@ -14,21 +21,21 @@
 }
 
 html{
-    background:#222;
+    background:$dark-color;
 }
 
 body{
-    background:#fff;
+    background:$off-white;
     font-family: Open Sans, sans-serif;
     margin:0 auto;
 }
 
 .dark{
-    background:#0C3D56;
+    background:$dark-color;
 }
 
 .dark{
-    color:#fff;
+    color:$off-white;
 }
 
 a{
@@ -48,9 +55,8 @@ h2{
 p{
     line-height: 150%;
     padding-bottom:20px;
-    font-family:Gentium Book Basic;
+    font-family:Open Sans;
     font-size:13pt;
-    letter-spacing: .5pt;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -59,7 +65,7 @@ p{
 
 nav{
     position:relative;
-    border-bottom: 5px #70BBA8 solid;
+    border-bottom: 5px $accent-1 solid;
 }
 
 nav *{
@@ -72,7 +78,6 @@ nav img{
 
 nav h1{
     font-size:24pt;
-    font-weight: 700;
     padding-left:10px;
     top:-12px;
 }
@@ -87,11 +92,12 @@ nav.dark a{
 }
 
 nav.dark a h1{
-    color:#fff;
+    color:$off-white;
+    font-weight:900;
 }
 
 nav.dark a:hover{
-    color:#fff;
+    color:$off-white;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -99,9 +105,8 @@ nav.dark a:hover{
 //////////////////////////////////////////////////////////////////////////////*/
 
 footer{
-    background:#70BBA8;
+    background:$accent-1;
     padding:15px;
-    /*border-top:10px solid #222222;*/
     position:relative;
 }
 
@@ -143,26 +148,29 @@ footer a{
     float:right;
 }
 
-#main h2{
+#main p{
     font-size:18pt;
+    padding-bottom:0px;
 }
 
-#main div div h2, #main_changer{
+#main_changer{
     font-size:48pt;
-    font-weight:700;
+    font-weight:900;
+    font-style:italic;
 }
 
-#main a{
+#main a, #send{
     font-size:18pt;
-    background:#0C3D56;
-    color:#fff;
+    background:$dark-color;
+    color:$off-white;
     padding:5px;
     border-radius:5px;
     -webkit-border-radius:5px;
     -o-border-radius:5px;
     top:30px;
-    padding-left:15px;
-    padding-right:15px;
+    padding:20px 30px;
+    display:inline-block;
+    border:0px;
 
 
     -webkit-transition: all 500ms ease-in-out;
@@ -172,9 +180,8 @@ footer a{
     transition: all 500ms ease-in-out;
 }
 
-#main a:hover{
-    background:#F5885F;
-    color:#000;
+#main a:hover, #send:hover{
+    background:$accent-2;
 }
 
 #main svg, #main img{
@@ -188,7 +195,7 @@ footer a{
 }
 
 path{
-    stroke:#F5885F;
+    stroke:$accent-2;
     opacity:0;
 }
 
@@ -202,8 +209,10 @@ path{
 
 #services h3{
     font-size:24pt;
-    font-weight:600;
     padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid $accent-1;
+
     width: 150%;
     position: relative;
     left: -25%;
@@ -239,7 +248,6 @@ path{
 }
 
 #testimonials div:nth-of-type(2){
-    font-weight:600;
     font-style:normal;
     padding-bottom:4px;
 }
@@ -259,7 +267,6 @@ form div{
 
 .contact h3{
     font-size:36pt;
-    font-weight:600;
     padding-bottom:20px;
 }
 
@@ -272,25 +279,12 @@ label{
 }
 
 #send{
-    color: #000;
-    border:0px;
-    padding:10px;
-    border-radius:8px;
-    cursor:pointer;
     width:95%;
     font-style:italic;
-    background:#70BBA8;
-
-
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-
-#send:hover{
-    background:#F5885F;
+    border-bottom:0px;
+    cursor:pointer;
+    line-height: inherit;
+    background: $accent-1;
 }
 
 label, input, textarea{
@@ -299,7 +293,7 @@ label, input, textarea{
 }
 
 input, textarea{
-    font-family: Gentium Book Basic;
+    font-family: Open Sans;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -313,21 +307,16 @@ input, textarea{
 }
 
 #work .row:nth-of-type(even){
-    background:#0C3D56;
-    color:#fff;
+    background:$dark-color;
+    color:$off-white;
 }
 
 .workExample{
-    border:#0C3D56 solid 5pt;
     transition:opacity 300ms ease-in-out;
 }
 
 .workExample:hover{
     opacity:1;
-}
-
-.row:nth-of-type(even) .workExample{
-    border:#fff solid 5pt;
 }
 
 .disclaimer{
@@ -341,12 +330,12 @@ input, textarea{
 #work .row h2{
     font-size:21pt;
     text-transform:uppercase;
-    letter-spacing:3px;
-    color:#70BBA8;
+    letter-spacing: 3px;
+    color:$accent-1;
 }
 
 #work .row:nth-of-type(odd) h2{
-    color:#F5885F;
+    color:$accent-2;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -450,31 +439,6 @@ input, textarea{
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
-    Medium screens
-//////////////////////////////////////////////////////////////////////////////*/
-
-@media (max-width : 850px){
-    #main svg, #main img{
-        transform:scale(.3);
-        -webkit-transform:scale(.3);
-        -ms-transform:scale(.3);
-    }
-
-    #main{
-        padding-bottom:50px;
-        height:340px;
-    }
-
-    #main .col-7{
-        padding-top:60px;
-    }
-
-    #main div div h2, #main_changer{
-        font-size:36pt;
-    }
-}
-
-/*/////////////////////////////////////////////////////////////////////////////
     Small computer screens
 //////////////////////////////////////////////////////////////////////////////*/
 
@@ -485,7 +449,7 @@ input, textarea{
     }
 
     #main .col-7{
-        padding-top:160px;
+        padding-top:120px;
     }
 
     #services .col-2:first-of-type{
@@ -516,7 +480,7 @@ input, textarea{
         width:100%;
         height:700px;
         position:relative;
-        color:#fff;
+        color:$off-white;
         font-size:20px;
         padding-top:20px;
     }
@@ -538,11 +502,15 @@ input, textarea{
 
     input, textarea{
         border:none;
-        border-bottom:2px dashed #70BBA8;
+        border-bottom:2px dashed $accent-1;
         color:#564F4D;
         font-size:20px;
         padding-top:5px;
         z-index:1;
+    }
+
+    input{
+        padding-bottom: 0px;
     }
 
     input:focus, textarea:focus{
@@ -553,7 +521,7 @@ input, textarea{
         font-size:20px;
         position:relative;
         z-index:1;
-        background:#fff;
+        background:$off-white;
         color:#343434;
         width: 22.1153846154%; 
         z-index:2;
@@ -569,6 +537,8 @@ input, textarea{
     #send{
         width:80%;
         left:19%;
+        position:relative;
+        top:0px;
     }
 
     .sectionLabel{
@@ -601,6 +571,39 @@ input, textarea{
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
+    Medium screens
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width : 950px){
+    #main svg, #main img{
+        transform:scale(.3);
+        -webkit-transform:scale(.3);
+        -ms-transform:scale(.3);
+    }
+
+    #main{
+        padding-bottom:50px;
+        height:340px;
+    }
+
+    #main .col-7{
+        padding-top:60px;
+    }
+
+    #main_changer{
+        font-size:36pt;
+    }
+
+    .testimonial_arrow{
+        display:none;
+    }
+
+    #services h3{
+        border-bottom:0px;
+    }
+}
+
+/*/////////////////////////////////////////////////////////////////////////////
     Phones
 //////////////////////////////////////////////////////////////////////////////*/
 
@@ -620,7 +623,7 @@ input, textarea{
 
     .ham{
         transition: fill 500ms ease-in-out;
-        fill:#fff;
+        fill:$off-white;
     }
 
     .svg_holder{
@@ -661,14 +664,14 @@ input, textarea{
     }
 
     #main{
-        height:260px;
+        height:300px;
     }
 
     #main .col-7{
         padding-top:60px;
     }
 
-    #main div div h2, #main_changer{
+    #main_changer{
         font-size:30pt;
     }
 

@@ -13,9 +13,9 @@
 
 		<div id="main" class="row">
 			<div class="col-7 stretch-12">
-					<h2 class="center">
-						We Build 
-					</h2>
+					<p class="center">
+						I Build 
+					</p>
 					<div id="main_changer" class="center">
 						Websites
 					</div>
@@ -35,7 +35,7 @@
 				<h3>Branding</h3>
 
 				<P>
-					Make a great first impression and attract new customers with our professional branding services.
+					Make a great first impression and attract new customers with my professional branding services.
 				</p>
 			</div>
 
@@ -45,7 +45,7 @@
 				<h3>Design</h3>
 
 				<P>
-					Our high quality designs will help your business stand out in the marketplace.		
+					My high quality designs will help your business stand out in the marketplace.		
 				</p>
 			</div>
 
@@ -55,7 +55,7 @@
 				<h3>Development</h3>
 				
 				<p>
-					With years of experience, we'll use the latest web technologies to deliver you a high quality site. 
+					With years of experience, I'll use the latest web technologies to deliver you a high quality site. 
 				</p>
 			</div>
 		</div>
@@ -76,7 +76,7 @@
 		</div>
 
 		<?php
-			include('php/contact_form2.php');
+			include('php/contact_form.php');
 			include('php/footer.php');
 			include('php/scripts.php');
 		?>

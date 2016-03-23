@@ -68,13 +68,6 @@ function set_click_events(){
 		}, 300);
 	});
 
-	$('input').focus( function(){
-		inputSelect($(this),$(this).val());
-	});
-	$('textarea').focus( function(){
-		textSelect($(this),$(this).text());
-	});
-
 	$('.left').click( function(){
 		manually_switch_testimonials(-2);
 	});
@@ -227,19 +220,6 @@ function toggle(){
 		$('nav').css('max-height','64px');
 		$('.ham:first-of-type, .ham:last-of-type').css('fill','#fff');
 		toggleVal = false;
-	}
-}
-
-function inputSelect(identifier,defaultV){
-	if (identifier.val() == defaultV){
-		identifier.attr('value','');
-	}
-}
-
-
-function textSelect(identifier,defaultV){
-	if (identifier.text() == defaultV){
-		identifier.text('');
 	}
 }
 

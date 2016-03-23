@@ -57,10 +57,10 @@ table {
   z-index: 1; }
 
 html {
-  background: #222; }
+  background: #0C3D56; }
 
 body {
-  background: #fff;
+  background: #ffffff;
   font-family: Open Sans, sans-serif;
   margin: 0 auto; }
 
@@ -68,7 +68,7 @@ body {
   background: #0C3D56; }
 
 .dark {
-  color: #fff; }
+  color: #ffffff; }
 
 a {
   text-decoration: none; }
@@ -84,9 +84,8 @@ h2 {
 p {
   line-height: 150%;
   padding-bottom: 20px;
-  font-family: Gentium Book Basic;
-  font-size: 13pt;
-  letter-spacing: .5pt; }
+  font-family: Open Sans;
+  font-size: 13pt; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Nav
@@ -103,7 +102,6 @@ nav img {
 
 nav h1 {
   font-size: 24pt;
-  font-weight: 700;
   padding-left: 10px;
   top: -12px; }
 
@@ -115,10 +113,11 @@ nav.dark a {
   color: #ddd; }
 
 nav.dark a h1 {
-  color: #fff; }
+  color: #ffffff;
+  font-weight: 900; }
 
 nav.dark a:hover {
-  color: #fff; }
+  color: #ffffff; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Footer
@@ -126,7 +125,6 @@ nav.dark a:hover {
 footer {
   background: #70BBA8;
   padding: 15px;
-  /*border-top:10px solid #222222;*/
   position: relative; }
 
 footer a {
@@ -160,33 +158,35 @@ footer a {
 #main [class^="col-"] {
   float: right; }
 
-#main h2 {
-  font-size: 18pt; }
+#main p {
+  font-size: 18pt;
+  padding-bottom: 0px; }
 
-#main div div h2, #main_changer {
+#main_changer {
   font-size: 48pt;
-  font-weight: 700; }
+  font-weight: 900;
+  font-style: italic; }
 
-#main a {
+#main a, #send {
   font-size: 18pt;
   background: #0C3D56;
-  color: #fff;
+  color: #ffffff;
   padding: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   top: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 20px 30px;
+  display: inline-block;
+  border: 0px;
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   -ms-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out; }
 
-#main a:hover {
-  background: #F5885F;
-  color: #000; }
+#main a:hover, #send:hover {
+  background: #F5885F; }
 
 #main svg, #main img {
   transform: scale(0.45);
@@ -208,8 +208,9 @@ path {
 
 #services h3 {
   font-size: 24pt;
-  font-weight: 600;
   padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #70BBA8;
   width: 150%;
   position: relative;
   left: -25%; }
@@ -237,7 +238,6 @@ path {
   line-height: 140%; }
 
 #testimonials div:nth-of-type(2) {
-  font-weight: 600;
   font-style: normal;
   padding-bottom: 4px; }
 
@@ -253,7 +253,6 @@ form div {
 
 .contact h3 {
   font-size: 36pt;
-  font-weight: 600;
   padding-bottom: 20px; }
 
 form .row {
@@ -263,29 +262,19 @@ label {
   padding-bottom: 5px; }
 
 #send {
-  color: #000;
-  border: 0px;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
   width: 95%;
   font-style: italic;
-  background: #70BBA8;
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out; }
-
-#send:hover {
-  background: #F5885F; }
+  border-bottom: 0px;
+  cursor: pointer;
+  line-height: inherit;
+  background: #70BBA8; }
 
 label, input, textarea {
   font-size: 20px;
   padding: 3px; }
 
 input, textarea {
-  font-family: Gentium Book Basic; }
+  font-family: Open Sans; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Work
@@ -297,17 +286,13 @@ input, textarea {
 
 #work .row:nth-of-type(even) {
   background: #0C3D56;
-  color: #fff; }
+  color: #ffffff; }
 
 .workExample {
-  border: #0C3D56 solid 5pt;
   transition: opacity 300ms ease-in-out; }
 
 .workExample:hover {
   opacity: 1; }
-
-.row:nth-of-type(even) .workExample {
-  border: #fff solid 5pt; }
 
 .disclaimer {
   width: 66%;
@@ -428,24 +413,6 @@ input, textarea {
   nav a {
     font-size: 12pt; } }
 /*/////////////////////////////////////////////////////////////////////////////
-    Medium screens
-//////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 850px) {
-  #main svg, #main img {
-    transform: scale(0.3);
-    -webkit-transform: scale(0.3);
-    -ms-transform: scale(0.3); }
-
-  #main {
-    padding-bottom: 50px;
-    height: 340px; }
-
-  #main .col-7 {
-    padding-top: 60px; }
-
-  #main div div h2, #main_changer {
-    font-size: 36pt; } }
-/*/////////////////////////////////////////////////////////////////////////////
     Small computer screens
 //////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 701px) {
@@ -454,7 +421,7 @@ input, textarea {
     height: 440px; }
 
   #main .col-7 {
-    padding-top: 160px; }
+    padding-top: 120px; }
 
   #services .col-2:first-of-type {
     margin-left: 17.30769230765%; }
@@ -479,7 +446,7 @@ input, textarea {
     width: 100%;
     height: 700px;
     position: relative;
-    color: #fff;
+    color: #ffffff;
     font-size: 20px;
     padding-top: 20px; }
 
@@ -503,6 +470,9 @@ input, textarea {
     padding-top: 5px;
     z-index: 1; }
 
+  input {
+    padding-bottom: 0px; }
+
   input:focus, textarea:focus {
     color: #343434; }
 
@@ -510,7 +480,7 @@ input, textarea {
     font-size: 20px;
     position: relative;
     z-index: 1;
-    background: #fff;
+    background: #ffffff;
     color: #343434;
     width: 22.1153846154%;
     z-index: 2; }
@@ -523,7 +493,9 @@ input, textarea {
 
   #send {
     width: 80%;
-    left: 19%; }
+    left: 19%;
+    position: relative;
+    top: 0px; }
 
   .sectionLabel {
     position: relative;
@@ -548,6 +520,30 @@ input, textarea {
   .right {
     right: 15%; } }
 /*/////////////////////////////////////////////////////////////////////////////
+    Medium screens
+//////////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 950px) {
+  #main svg, #main img {
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3); }
+
+  #main {
+    padding-bottom: 50px;
+    height: 340px; }
+
+  #main .col-7 {
+    padding-top: 60px; }
+
+  #main_changer {
+    font-size: 36pt; }
+
+  .testimonial_arrow {
+    display: none; }
+
+  #services h3 {
+    border-bottom: 0px; } }
+/*/////////////////////////////////////////////////////////////////////////////
     Phones
 //////////////////////////////////////////////////////////////////////////////*/
 @media (max-width: 700px) {
@@ -563,7 +559,7 @@ input, textarea {
 
   .ham {
     transition: fill 500ms ease-in-out;
-    fill: #fff; }
+    fill: #ffffff; }
 
   .svg_holder {
     position: absolute;
@@ -597,12 +593,12 @@ input, textarea {
     margin-left: 25%; }
 
   #main {
-    height: 260px; }
+    height: 300px; }
 
   #main .col-7 {
     padding-top: 60px; }
 
-  #main div div h2, #main_changer {
+  #main_changer {
     font-size: 30pt; }
 
   #main svg, #main img {
