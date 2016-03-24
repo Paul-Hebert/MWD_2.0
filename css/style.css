@@ -225,7 +225,8 @@ path {
     Testimonials
 //////////////////////////////////////////////////////////////////////////////*/
 #testimonials {
-  height: 280px;
+  height: auto;
+  min-height: 280px;
   padding-top: 60px; }
 
 #testimonials div {
@@ -553,9 +554,6 @@ input, textarea {
 
   .desktop {
     display: none; }
-
-  #testimonials {
-    height: 300px; }
 
   .ham {
     transition: fill 500ms ease-in-out;

@@ -232,7 +232,8 @@ path{
 //////////////////////////////////////////////////////////////////////////////*/
 
 #testimonials{
-    height:280px;
+    height:auto;
+    min-height:280px;
     padding-top:60px;
 }
 
@@ -615,10 +616,6 @@ input, textarea{
 
     .desktop{
         display:none;
-    }
-
-    #testimonials{
-        height:300px;
     }
 
     .ham{
