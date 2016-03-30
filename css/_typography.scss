@@ -1,0 +1,30 @@
+a{
+    text-decoration:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing: .1em;
+    color:$dark-color;	
+}
+
+h1{
+	font-weight:800;
+	font-size:$large;
+    margin-bottom:$large;	
+}
+
+h2{
+    font-size:21pt;
+    font-weight:400;
+    font-size:$medium;
+    margin-bottom:$extra-small;
+}
+
+p{
+    line-height: 150%;
+    padding-bottom:20px;
+    font-family:Open Sans;
+    font-size:13pt;
+}

@@ -1,10 +1,23 @@
-@import 'reset';
-
 $background-color:#222;
 $dark-color:#0C3D56;
-$off-white:#ffffff;
+$hovered:#0E4F70;
+$off-black:#000;
+$white:#ffffff;
+$subtle:#F4F4F4;
 $accent-1:#70BBA8;
 $accent-2:#F5885F;
+
+$extra-small    :   10pt;
+$small          :   13pt;
+$medium         :   16pt;
+$large          :   21pt;
+$extra-large    :   34pt;
+
+@import 'reset';
+@import 'mixins';
+@import 'extends';
+@import 'grid';
+@import 'typography';
 
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -20,43 +33,34 @@ $accent-2:#F5885F;
     z-index:1;
 }
 
-html{
-    background:$dark-color;
-}
-
 body{
-    background:$off-white;
+    background:$subtle;
     font-family: Open Sans, sans-serif;
     margin:0 auto;
 }
 
-.dark{
+.button{
+    font-size:18pt;
     background:$dark-color;
+    color:$subtle;
+    padding:5px;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -o-border-radius:5px;
+    top:30px;
+    padding:20px 30px;
+    display:inline-block;
+    border:0px;
+
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
-.dark{
-    color:$off-white;
-}
-
-a{
-    text-decoration:none;
-}
-
-form, #services, #testimonials{
-    padding-bottom:20px;
-}
-
-h2{
-    font-weight:600;
-    font-size:24pt;
-    margin-bottom:15px;
-}
-
-p{
-    line-height: 150%;
-    padding-bottom:20px;
-    font-family:Open Sans;
-    font-size:13pt;
+.button:hover{
+    background:$hovered;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -64,40 +68,22 @@ p{
 //////////////////////////////////////////////////////////////////////////////*/
 
 nav{
-    position:relative;
-    border-bottom: 5px $accent-1 solid;
-}
+    padding:30px;
+    width:100%;
 
-nav *{
-    position:relative;
-}
-
-nav img{
-    top:-14px;
-}
-
-nav h1{
-    font-size:24pt;
-    padding-left:10px;
-    top:-12px;
+    &:before{
+        @extend .stripes1;
+        content:' ';
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+    }
 }
 
 nav a{
     font-size:14pt;
-    top:-3px;
-}
-
-nav.dark a{
-    color:#ddd;
-}
-
-nav.dark a h1{
-    color:$off-white;
-    font-weight:900;
-}
-
-nav.dark a:hover{
-    color:$off-white;
+    color:$off-black;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -105,13 +91,21 @@ nav.dark a:hover{
 //////////////////////////////////////////////////////////////////////////////*/
 
 footer{
-    background:$accent-1;
     padding:15px;
     position:relative;
+
+    &:after{
+        @extend .stripes2;
+        content:' ';
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }    
 }
 
 footer a{
-    color:#000;
+    color:$off-black;
     font-weight:600;
     font-size:21px;
 }
@@ -159,31 +153,6 @@ footer a{
     font-style:italic;
 }
 
-#main a, #send{
-    font-size:18pt;
-    background:$dark-color;
-    color:$off-white;
-    padding:5px;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -o-border-radius:5px;
-    top:30px;
-    padding:20px 30px;
-    display:inline-block;
-    border:0px;
-
-
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-}
-
-#main a:hover, #send:hover{
-    background:$accent-2;
-}
-
 #main svg, #main img{
     transform:scale(.45);
     -webkit-transform:scale(.45);
@@ -194,63 +163,13 @@ footer a{
     -ms-transform-origin:0 0;
 }
 
+svg .filled{
+    fill:#F4F4F4;
+}
+
 path{
     stroke:$accent-2;
     opacity:0;
-}
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Services
-//////////////////////////////////////////////////////////////////////////////*/
-
-#services{
-    padding-bottom:50px;
-}
-
-#services h3{
-    font-size:24pt;
-    padding-bottom:10px;
-    margin-bottom:10px;
-    border-bottom:1px solid $accent-1;
-
-    width: 150%;
-    position: relative;
-    left: -25%;
-}
-
-#services .col-2 *{
-    text-align: center;
-}
-
-#services .col-2{
-    margin-right:12.5%;
-}
-
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Testimonials
-//////////////////////////////////////////////////////////////////////////////*/
-
-#testimonials{
-    height:auto;
-    min-height:280px;
-    padding-top:60px;
-}
-
-#testimonials div{
-    font-size:14pt;
-    font-style:italic;
-}
-
-#testimonials div:first-of-type{
-    font-size:18pt;
-    padding-bottom:30px;
-    line-height:140%;
-}
-
-#testimonials div:nth-of-type(2){
-    font-style:normal;
-    padding-bottom:4px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -302,88 +221,59 @@ input, textarea{
 //////////////////////////////////////////////////////////////////////////////*/
 
 #work .row{
-    padding:90px;
+    background:$subtle;
+
+    padding-top:90px;
     padding-left:4.8076923077%;
     padding-right:4.8076923077%;
+    padding-bottom:0px;
+    border-bottom:1px solid $white;
 }
 
-#work .row:nth-of-type(even){
-    background:$dark-color;
-    color:$off-white;
+#work .row, #call_to_action{
+    @include shadow(  0px 0px 7px 5px rgba(50, 50, 50, 0.3) );
+    z-index:10;
+    position:relative;
+
+    &:before{
+        @include shadow(  0px 0px 15px 12px rgba(50, 50, 50, 0.3) );
+        z-index:0;
+        position:absolute;
+        left:0px;
+        right:0px;
+        bottom:0px;
+        content:' ';
+    }
 }
 
 .workExample{
-    transition:opacity 300ms ease-in-out;
+    z-index:5;    
+    position:relative;
+    bottom:-15px;
+    @include transition_mixin(bottom 200ms);
+
+    img{
+        width:100%;
+    }
+
+    .digital{
+        background:#ccc;
+        border:1px solid #ccc;
+        padding-top:25px;
+        @include radius(10px 10px 0px 0px);
+
+        &.phone{
+            position:absolute;
+            bottom:-80px;
+            right:20px;
+            width:200px;
+        }
+    }    
 }
 
 .workExample:hover{
-    opacity:1;
+    bottom:-5px;
 }
-
-.disclaimer{
-    width:66%;
-    margin:0 auto;
-    top:40%;
-    text-align:center;
-    font-size:16pt;
-}
-
-#work .row h2{
-    font-size:21pt;
-    text-transform:uppercase;
-    letter-spacing: 3px;
-    color:$accent-1;
-}
-
-#work .row:nth-of-type(odd) h2{
-    color:$accent-2;
-}
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Columns 
-//////////////////////////////////////////////////////////////////////////////*/
-
-.row{
-    clear: both;
-    margin: 0 auto;
-    padding-top:30px;
-    overflow:hidden;
-    width:100%;
-    padding-right: 1%;
-    padding-left: 1%;
-}
-
-[class^="col-"] {
-    float: left;
-    margin: 0 3.84615384615% 0 0;
-    list-style: none;
-    position: relative;
-}
-
-[class^="col-"]:last-of-type{
-    margin: 0 0;
-}
-
-.col-1 { width: 4.8076923077% }
-.col-2 { width: 13.4615384615% }
-.col-3 { width: 22.1153846154% }
-.col-4 { width: 30.7692307692% }
-.col-5 { width: 39.4230769231% }
-.col-6 { width: 48.0769230769% }
-.col-7 { width: 56.7307692308% }
-.col-8 { width: 65.3846153846% }
-.col-9 { width: 74.0384615385% }
-.col-10 { width: 82.6923076923% }
-.col-11 { width: 91.3461538462% }
-.col-12 { width: 100%; margin: 0 }
-
-.center{
-    clear:both;
-    margin:0 auto !important;
-    float:none;
-    text-align:center;
-}
-
 
 /*/////////////////////////////////////////////////////////////////////////////
     Internet explorer 
@@ -453,16 +343,6 @@ input, textarea{
         padding-top:120px;
     }
 
-    #services .col-2:first-of-type{
-        margin-left: 17.30769230765%;
-    }  
-
-    #services p{
-        position:relative;
-        width:140%;
-        left:-20%;
-    } 
-
     #work .row:nth-of-type(even) [class^="col-"]{
         float:right;
     }
@@ -481,7 +361,7 @@ input, textarea{
         width:100%;
         height:700px;
         position:relative;
-        color:$off-white;
+        color:$subtle;
         font-size:20px;
         padding-top:20px;
     }
@@ -522,7 +402,6 @@ input, textarea{
         font-size:20px;
         position:relative;
         z-index:1;
-        background:$off-white;
         color:#343434;
         width: 22.1153846154%; 
         z-index:2;
@@ -547,10 +426,6 @@ input, textarea{
         width:60%;
         left:20%;
         top:-30px;
-    }
-
-    .workExample{
-        opacity:.8;
     }
 
     .testimonial_arrow{
@@ -594,14 +469,6 @@ input, textarea{
     #main_changer{
         font-size:36pt;
     }
-
-    .testimonial_arrow{
-        display:none;
-    }
-
-    #services h3{
-        border-bottom:0px;
-    }
 }
 
 /*/////////////////////////////////////////////////////////////////////////////
@@ -620,7 +487,7 @@ input, textarea{
 
     .ham{
         transition: fill 500ms ease-in-out;
-        fill:$off-white;
+        fill:$subtle;
     }
 
     .svg_holder{

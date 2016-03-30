@@ -2,23 +2,12 @@
     Vars and Arrays
 //////////////////////////////////////////////////////////////////////////////*/
 
-var testimonials = [
-					['Paul went above and beyond in working hard to understand my web design needs &#8230; and he made the process easy and fun to be involved in.','- Anna Garzon,','Wildflour Bakery'],
-					['Able to really embrace my ideas and make them a reality &#8230; I highly recommend his work &#8230; Paul is professional and his work is amazing.','- Sam Steyer,','The Pour House'],
-					['Very original and creative. I love working with him as he always gives me many directions to choose from &#8230; the designs are interesting and fresh.','- Nicholas Huang,','Impurity Bike Co.'],
-					['As a small business I was very lucky to have Paul work for me &#8230; I would recommend Paul to anyone!','- Dann Rogers,','Musician']/*,
-					['A really strong contributor &#8230; [he is] consistently producing great work.','- Debra Johnson,','Tehama Group Communications'],
-					['Very good and driven &#8230; [he came] up with an excellent website &#8230; and designed a logo I loved.','- Bob Tolar,','Pixel Perfect LED']*/
-				];
-
 var main = [
 			['Websites','#websites'],
 			['Brands','#branding'],
 			['Businesses','#businesses'],
 			['Relationships','#relationships']
 		];
-
-var testi_val = 0;
 
 var main_val = 0;
 
@@ -31,8 +20,6 @@ var stroke_width = '3pt';
 var cph_changed = false;
 
 var main_frequency = 4500;
-
-var testi_frequency = 4500;
 
 var toggleVal = false;
 
@@ -50,32 +37,13 @@ if(GetIEVersion() > 0){
 $(function() {
 	load_svgs();
 
-	set_click_events();
-
     setInterval( "switch_main()", main_frequency );
-    testimonial_timer = setInterval( "switch_testimonials()", testi_frequency );
 });
 
 
 /*/////////////////////////////////////////////////////////////////////////////
     Functions
 //////////////////////////////////////////////////////////////////////////////*/
-
-function set_click_events(){
-	$('#arrow').click( function(){
-		$('html, body').animate({
-		    scrollTop: $("body").offset().top
-		}, 300);
-	});
-
-	$('.left').click( function(){
-		manually_switch_testimonials(-2);
-	});
-
-	$('.right').click( function(){
-		manually_switch_testimonials(0);
-	});
-}
 
 function load_svgs(){
 	if (screen.width > 700){
@@ -115,36 +83,6 @@ function switch_main(){
 		main_val = 0;
 	}
 }
-
-function switch_testimonials(){
-	$('#testimonials div').fadeOut(duration, function(){
-		$('#testimonials div:nth-of-type(1)').html('\u201c' + testimonials[testi_val][0] + '\u201d');
-		$('#testimonials div:nth-of-type(2)').text(testimonials[testi_val][1]);
-		$('#testimonials div:nth-of-type(3)').text(testimonials[testi_val][2]);
-		$('#testimonials div').fadeIn(duration);
-	});
-
-	testi_val++;
-
-	if (testi_val >= testimonials.length){
-		testi_val = 0;
-	}
-}
-
-function manually_switch_testimonials(num){
-	clearInterval(testimonial_timer);
-
-	testi_val += num;
-	switch_testimonials();
-
-	if (testi_val >= testimonials.length){
-		testi_val = 0;
-	} else if( testi_val < 0){
-		testi_val = testimonials.length - 1;
-	}
-}
-
-
 
 function draw_svg(path_array){
 	$('path').css('opacity','0.0');
@@ -198,17 +136,6 @@ function shrink_svg(path_array){
 		path.style.strokeDashoffset = length;
 	}
 	return;
-}
-
-
-function websiteChanged(target){
-	if (cph_changed == false){
-		var switchHeight = $('#' + target).height();
-		$('#' + target).html('<h4 class="disclaimer">The Pour House recently switched to a new website. To view an archived copy of the site we designed for them, click here.</h4>').css({'color':'#000','background':'#fff'}).css('height',switchHeight);
-		cph_changed = true;
-	} else{
-		window.open("cph_newest/");
-	}
 }
 
 function toggle(){
