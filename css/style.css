@@ -45,15 +45,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.stripes1, nav:before {
+.stripes, body:after, header:before {
   height: 5pt;
   width: 100%;
   background: repeating-linear-gradient(to right, #70BBA8, #70BBA8 33.33333%, #0C3D56 33.33333%, #0C3D56 66.66666%, #F5885F 66.66666%, #F5885F 99.99999%); }
-
-.stripes2, footer:after {
-  height: 5pt;
-  width: 100%;
-  background: repeating-linear-gradient(to right, #F5885F, #F5885F 33.33333%, #0C3D56 33.33333%, #0C3D56 66.66666%, #70BBA8 66.66666%, #70BBA8 99.99999%); }
 
 .row {
   clear: both;
@@ -127,13 +122,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-weight: 800;
-  font-size: 21pt;
+  font-size: 34pt;
   margin-bottom: 21pt; }
 
 h2 {
-  font-size: 21pt;
   font-weight: 400;
-  font-size: 16pt;
+  font-size: 21pt;
   margin-bottom: 10pt; }
 
 p {
@@ -154,14 +148,22 @@ p {
   z-index: 1; }
 
 body {
-  background: #F4F4F4;
+  background: #F0F0F0;
   font-family: Open Sans, sans-serif;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative; }
+  body:after {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px; }
 
 .button {
-  font-size: 18pt;
+  font-size: 16pt;
   background: #0C3D56;
-  color: #F4F4F4;
+  color: #F0F0F0;
   padding: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -180,56 +182,31 @@ body {
   background: #0E4F70; }
 
 /*/////////////////////////////////////////////////////////////////////////////
-    Nav
+    header
 //////////////////////////////////////////////////////////////////////////////*/
-nav {
-  padding: 30px;
+header {
+  padding: 34pt;
   width: 100%; }
-  nav:before {
+  header h1 {
+    display: inline-block; }
+  header:before {
     content: ' ';
     position: absolute;
     left: 0px;
     right: 0px;
     top: 0px; }
-
-nav a {
-  font-size: 14pt;
-  color: #000; }
+  header nav {
+    float: right; }
+    header nav a {
+      font-size: 14pt;
+      color: #000;
+      padding-right: 34pt; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Footer
 //////////////////////////////////////////////////////////////////////////////*/
 footer {
-  padding: 15px;
-  position: relative; }
-  footer:after {
-    content: ' ';
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px; }
-
-footer a {
-  color: #000;
-  font-weight: 600;
-  font-size: 21px; }
-
-#arrow {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: -30px;
-  right: 15px;
-  cursor: pointer; }
-
-#github {
-  position: absolute;
-  right: 90px;
-  top: 10px; }
-
-#github img {
-  height: 32px;
-  width: auto; }
+  height: 50px; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Main
@@ -241,12 +218,11 @@ footer a {
   float: right; }
 
 #main p {
-  font-size: 18pt;
+  font-size: 16pt;
   padding-bottom: 0px; }
 
 #main_changer {
-  font-size: 48pt;
-  font-weight: 900;
+  font-size: 34pt;
   font-style: italic; }
 
 #main svg, #main img {
@@ -258,7 +234,7 @@ footer a {
   -ms-transform-origin: 0 0; }
 
 svg .filled {
-  fill: #F4F4F4; }
+  fill: #F0F0F0; }
 
 path {
   stroke: #F5885F;
@@ -302,8 +278,15 @@ input, textarea {
 /*/////////////////////////////////////////////////////////////////////////////
     Work
 //////////////////////////////////////////////////////////////////////////////*/
+#work h1 {
+  text-align: center;
+  width: 100%; }
+
+#work .row:first-of-type {
+  padding-top: 30px; }
+
 #work .row {
-  background: #F4F4F4;
+  background: #F0F0F0;
   padding-top: 90px;
   padding-left: 4.8076923077%;
   padding-right: 4.8076923077%;
@@ -328,41 +311,33 @@ input, textarea {
     content: ' '; }
 
 .workExample {
-  z-index: 5;
   position: relative;
   bottom: -15px;
   -o-transition: bottom 200ms;
   -ms-transition: bottom 200ms;
   -webkit-transition: bottom 200ms;
   transition: bottom 200ms; }
+  .workExample:hover {
+    bottom: -5px; }
   .workExample img {
     width: 100%; }
-  .workExample .digital {
+  .workExample .controls {
     background: #ccc;
-    border: 1px solid #ccc;
-    padding-top: 25px;
+    height: 20px;
+    padding-left: 5px;
     -o-border-radius: 10px 10px 0px 0px;
     -ms-border-radius: 10px 10px 0px 0px;
     -webkit-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px; }
-    .workExample .digital.phone {
-      position: absolute;
-      bottom: -80px;
-      right: 20px;
-      width: 200px; }
-
-.workExample:hover {
-  bottom: -5px; }
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Internet explorer 
-//////////////////////////////////////////////////////////////////////////////*/
-#main img {
-  display: none; }
-
-#main img#websites {
-  position: relative;
-  display: block; }
+    .workExample .controls span {
+      background: #F0F0F0;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      display: inline-block; }
 
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -379,10 +354,10 @@ input, textarea {
     -ms-transform: scale(0.55);
     top: -50px; }
 
-  nav a {
+  header a {
     font-size: 16pt; }
 
-  nav h1 {
+  header h1 {
     font-size: 30pt; } }
 @media (max-width: 1000px) {
   #main svg, #main img {
@@ -390,7 +365,7 @@ input, textarea {
     -webkit-transform: scale(0.4);
     -ms-transform: scale(0.4); }
 
-  nav a {
+  header a {
     font-size: 12pt; } }
 /*/////////////////////////////////////////////////////////////////////////////
     Small computer screens
@@ -418,7 +393,7 @@ input, textarea {
     width: 100%;
     height: 700px;
     position: relative;
-    color: #F4F4F4;
+    color: #F0F0F0;
     font-size: 20px;
     padding-top: 20px; }
 
@@ -472,21 +447,7 @@ input, textarea {
     position: relative;
     width: 60%;
     left: 20%;
-    top: -30px; }
-
-  .testimonial_arrow {
-    font-size: 60pt;
-    color: #ccc;
-    font-weight: 800;
-    position: absolute;
-    top: 80px;
-    cursor: pointer; }
-
-  .left {
-    left: 15%; }
-
-  .right {
-    right: 15%; } }
+    top: -30px; } }
 /*/////////////////////////////////////////////////////////////////////////////
     Medium screens
 //////////////////////////////////////////////////////////////////////////////*/
@@ -518,32 +479,31 @@ input, textarea {
 
   .ham {
     transition: fill 500ms ease-in-out;
-    fill: #F4F4F4; }
+    fill: #F0F0F0; }
 
   .svg_holder {
     position: absolute;
     top: -11px;
     right: 25px; }
 
-  nav {
+  header {
     transition: max-height 500ms ease-in-out;
     max-height: 62px;
     position: absolute;
     z-index: 2; }
 
-  nav h1 {
+  header h1 {
     font-size: 16pt; }
 
-  nav .stretch-12 {
+  header .stretch-12 {
     font-size: 14pt;
     text-align: center;
     padding-top: 8px;
     margin-top: 12px;
-    border-top: 1px #ccc solid;
     padding-bottom: 8px;
     width: 100%; }
 
-  nav .stretch-12:last-of-type {
+  header .stretch-12:last-of-type {
     margin-top: 12px;
     padding-bottom: 20px; }
 

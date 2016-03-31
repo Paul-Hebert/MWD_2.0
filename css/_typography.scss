@@ -11,14 +11,13 @@ h1,h2,h3,h4,h5,h6{
 
 h1{
 	font-weight:800;
-	font-size:$large;
+	font-size:$extra-large;
     margin-bottom:$large;	
 }
 
 h2{
-    font-size:21pt;
     font-weight:400;
-    font-size:$medium;
+    font-size:$large;
     margin-bottom:$extra-small;
 }
 
@@ -26,5 +25,5 @@ p{
     line-height: 150%;
     padding-bottom:20px;
     font-family:Open Sans;
-    font-size:13pt;
+    font-size:$small;
 }
