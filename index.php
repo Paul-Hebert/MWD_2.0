@@ -32,6 +32,22 @@
 			<h1>Work</h1>
 
 			<?php
+				$title = 'Local Branch';
+				$description = 'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.';
+				$link = 'local-branch/';
+				$img = 'local-branch.png';
+				$button_text = 'Find Plants';
+				$digital = true;
+				include('php/work_row.php');
+
+				$title = 'Blurbb Email Builder';
+				$description = 'Coding HTML emails that look good in all the major email clients, browsers and devices is hard and time consuming. Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. Blurbb is perfect for newsletters and invitations as well as automated and transactional emails.';
+				$link = 'blurbb/';
+				$img = 'blurbb.png';
+				$button_text = 'Build Your Email';
+				$digital = true;
+				include('php/work_row.php');
+
 				$title = 'Pixel Perfect LED';
 				$description = 'Pixel Perfect LED specializes in renting out the latest LED technology. I developed a brand and visual identity for the company as well as a custom Wordpress theme that allows them to edit their site themselves.';
 				$link = 'http://www.pixelperfectled.com';
@@ -104,22 +120,23 @@
 				$digital = true;
 				include('php/work_row.php');
 
-				
-				$title = 'Local Branch';
-				$description = 'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.';
-				$link = 'local-branch/';
-				$img = 'local-branch.png';
-				$button_text = 'Find Plants';
-				$digital = true;
+				/*
+				$title = 'T is for Typography';
+				$description = '';
+				$link = 't-is-for-typography/';
+				$img = 't-is-for-typography.png';
+				$button_text = 'More Information';
+				$digital = false;
 				include('php/work_row.php');
 
-				$title = 'Blurbb Email Builder';
-				$description = 'Coding HTML emails that look good in all the major email clients, browsers and devices is hard and time consuming. Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. Blurbb is perfect for newsletters and invitations as well as automated and transactional emails.';
-				$link = 'blurbb/';
-				$img = 'blurbb.png';
-				$button_text = 'Build Your Email';
-				$digital = true;
+				$title = 'A Feast of the Will';
+				$description = '';
+				$link = 'a-feast-of-the-will/';
+				$img = 'a-feast-of-the-will.png';
+				$button_text = 'More Information';
+				$digital = false;
 				include('php/work_row.php');
+				*/
 			?>
 		</div>
 
