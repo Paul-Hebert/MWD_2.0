@@ -1,6 +1,5 @@
 <header>
 	<nav>
-		<a href="work.php">Work</a>		
 		<a href="Hebert_Resume.pdf">Resume</a>
 		<a href="https://github.com/Paul-Hebert" target="_BLANK">Github</a>	
 		<a href="contact.php">Contact</a>

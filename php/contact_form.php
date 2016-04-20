@@ -24,7 +24,7 @@
 						<label id="textLabel" for="message" class="col-3 stretch-12">Message:&nbsp;</label>
 						<textarea name="message" id="message" class="col-8 stretch-12" placeholder="Hey Paul,"></textarea>
 					</div>
-				<input type="submit" class="submit" value="Send" id="send"/>
+				<input type="submit" class="button row" value="Send" id="send"/>
 				</form>
 			</div>
 		</div>
