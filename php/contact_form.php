@@ -1,12 +1,11 @@
 		<div class="contact dark">
 			<div class="col-8 center stretch-12">
-				<h3>
+				<h1>
 					Let's work together!
-				</h3>
+				</h1>
 			</div>
 
 			<div class="contactHolder stretch-12">
-				<img src="imgs/envelope.png" class="desktop"/>
 				<form class="contactForm" method="post" action="php/mailto.php" id="content" enctype="multipart/form-data">
 					<div class="row">
 						<label class="col-3 stretch-12" for="name">Name:</label>

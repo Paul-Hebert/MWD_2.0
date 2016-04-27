@@ -11,8 +11,10 @@
 	<body>
 		<?php include('php/header.php') ?>
 
-		<div id="main" class="row">
-			<div class="col-7 stretch-12">
+		<div id="main" class="row desktop">
+			<div class="col-8" id="animation_wrapper"></div>
+
+			<div class="col-4">
 					<p class="center">
 						I Build 
 					</p>
@@ -22,9 +24,6 @@
 				<div class="center">
 					<a href="contact.php" class="button">Get In Touch</a>
 				</div>
-			</div>
-			
-			<div class="col-5 desktop">
 			</div>
 		</div>
 
@@ -136,6 +135,14 @@
 				$button_text = 'More Information';
 				$digital = false;
 				include('php/work_row.php');
+
+				$title = 'Grubaholics';
+				$description = 'Grubaholics is a recipe sharing site that allows fellow food-lovers to find and share recipes.';
+				$link = 'http://www.grubaholics.com';
+				$img = 'grubaholics.png';
+				$button_text = 'View Recipes';
+				$digital = true;
+				include('php/work_row.php');				
 				*/
 			?>
 		</div>

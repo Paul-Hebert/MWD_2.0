@@ -1,7 +1,6 @@
 @import 'reset';
 @import 'vars';
 @import 'mixins';
-@import 'extends';
 @import 'grid';
 @import 'typography';
 @import 'work';
@@ -16,25 +15,11 @@
 *{
     font-family: Open Sans, sans-serif;
     box-sizing:border-box;
-    position:relative;
-    z-index:1;
 }
 
 body{
-    background:$subtle;
     font-family: Open Sans, sans-serif;
-    margin:0 auto;
-    min-height:100vh;
-    position:relative;
-
-    &:after{
-        @extend .stripes;
-        content:' ';
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: -10px;
-    }    
+    background:$subtle;
 }
 
 .button{
@@ -42,16 +27,14 @@ body{
     background:$dark-color;
     color:$subtle;
     padding:5px;
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -o-border-radius:5px;
-    top:30px;
+    @include radius(5px);
     padding:20px 30px;
-    display:inline-block;
+    margin-top:30px;
     border:0px;
     cursor:pointer;
+    display:inline-block;
 
-    @include transition_mixin(all $base-duration $base-easing);
+    @include transition_mixin(background $base-duration $base-easing);
 }
 
 .button:hover{
@@ -63,20 +46,11 @@ body{
 //////////////////////////////////////////////////////////////////////////////*/
 
 header{
-    padding:$extra-large;
+    padding:$medium;
     width:100%;
 
     h1{
         display:inline-block;
-    }
-
-    &:before{
-        @extend .stripes;
-        content:' ';
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: 0px;
     }
 
     nav{
@@ -84,9 +58,14 @@ header{
         padding-top: 14px;
 
         a{
-            font-size:14pt;
-            color:$off-black;
-            padding-right:$extra-large;
+            color:$dark-color;
+            font-size:$small;
+            padding-left:$extra-large;
+            @include transition_mixin(color $base-duration $base-easing);
+
+            &:hover{
+                color:$hovered;
+            }
         }
     }
 }
@@ -95,79 +74,39 @@ header{
     Main
 //////////////////////////////////////////////////////////////////////////////*/
 
-#main *{
-    position:relative;
+#main{
+    border-bottom:2px solid $dark-color;
+    padding-top:0px;
+    padding-bottom:30px;
+
+    *{
+        position:relative;
+    }
+
+    p{
+        font-size:$medium;
+        padding-bottom:0px;
+        padding-top:45%;
+    }   
+
+    #main_changer{
+        font-size:$extra-large;
+        font-style:italic;
+    }
+
+    svg, img{
+        width:100%;
+
+        .filled{
+            fill:$subtle;
+        }
+
+        path{
+            stroke:$accent-2;
+            opacity:0;
+        }
+    }
 }
-
-#main [class^="col-"]{
-    float:right;
-}
-
-#main p{
-    font-size:$medium;
-    padding-bottom:0px;
-}
-
-#main_changer{
-    font-size:$extra-large;
-    font-style:italic;
-}
-
-#main svg, #main img{
-    transform:scale(.45);
-    -webkit-transform:scale(.45);
-    -ms-transform:scale(.45);
-
-    transform-origin:0 0;
-    -webkit-transform-origin:0 0;
-    -ms-transform-origin:0 0;
-}
-
-svg .filled{
-    fill:$subtle;
-}
-
-path{
-    stroke:$accent-2;
-    opacity:0;
-}
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Contact
-//////////////////////////////////////////////////////////////////////////////*/
-
-form{
-    padding-bottom: 90px;
-}
-
-form div{
-    position:relative;
-    padding-bottom:20px;
-}
-
-.contact h3{
-    font-size:36pt;
-    padding-bottom:20px;
-}
-
-form .row{
-    padding-top:15px;
-}
-
-label{
-    padding-bottom:5px;
-}
-
-label, input, textarea{
-    font-size:20px;
-    padding:3px;
-}
-
-input, textarea{
-    font-family: Open Sans;
-}
-
-
 
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -176,156 +115,48 @@ input, textarea{
 //////////////////////////////////////////////////////////////////////////////*/
 
 /*/////////////////////////////////////////////////////////////////////////////
-    Large screens
-//////////////////////////////////////////////////////////////////////////////*/
-
-@media (min-width : 1230px){
-    #main svg, #main img{
-        transform:scale(.55);
-        -webkit-transform:scale(.55);
-        -ms-transform:scale(.55);
-        top:-50px;
-    }
-
-    header a{
-        font-size:16pt;
-    }
-
-    header h1{
-        font-size:30pt;
-    }
-}
-
-
-@media (max-width : 1000px){
-    #main svg, #main img{
-        transform:scale(.4);
-        -webkit-transform:scale(.4);
-        -ms-transform:scale(.4);
-    }
-
-    header a{
-        font-size:12pt;
-    }
-}
-
-/*/////////////////////////////////////////////////////////////////////////////
     Small computer screens
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media (min-width : 701px){
-    #main{
-        padding-bottom:50px;
-        height:440px;
-    }
+    .mobile{
+        display:none;
+    } 
 
-    #main .col-7{
-        padding-top:120px;
+    #header{
+        padding:$extra-large;
     }
 
     #work .row:nth-of-type(even) [class^="col-"]{
         float:right;
     }
 
-    .mobile{
-        display:none;
-    } 
-
-    .contactHolder {
-        width: 800px;
-        margin: 0px auto;
-        position: relative;
-    }
-
-    .contact{
-        width:100%;
-        height:700px;
+    .workExample{
         position:relative;
-        color:$subtle;
-        font-size:20px;
-        padding-top:20px;
-    }
+        bottom:-15px;
+        @include transition_mixin(bottom $base-duration $base-easing);
 
-    .contact img, .contact .col-4{
-        padding-top:20px;
-    }
+        &:hover{
+            bottom:-5px;
+        }
 
-    .contact img{
-        width:100%;
-    }
+        .controls{
+            background:$subtle-2;
+            height:20px;
+            padding-left:5px;
+            @include radius(10px 10px 0px 0px);
 
-    .contactForm{
-        position:absolute;
-        left:70px;
-        top:80px;
-        width:70%;
-    }
-
-    input, textarea{
-        border:none;
-        border-bottom:2px dashed $accent-1;
-        color:#564F4D;
-        font-size:20px;
-        padding-top:5px;
-        z-index:1;
-    }
-
-    input{
-        padding-bottom: 0px;
-    }
-
-    input:focus, textarea:focus{
-        color:#343434;
-    }
-
-    label{
-        font-size:20px;
-        position:relative;
-        z-index:1;
-        color:#343434;
-        width: 22.1153846154%; 
-        z-index:2;
-    }
-
-    textarea{
-        height:105px;
-        background:url('../imgs/dash.png');
-        line-height:125%;
-        border:none;
-    }
-
-    .sectionLabel{
-        position:relative;
-        width:60%;
-        left:20%;
-        top:-30px;
+            span{
+                background:$subtle;
+                @include radius(50%);
+                width:8px;
+                height:8px;
+                display:inline-block;
+            }
+        }    
     }
 }
 
-/*/////////////////////////////////////////////////////////////////////////////
-    Medium screens
-//////////////////////////////////////////////////////////////////////////////*/
-
-@media (max-width : 950px){
-    #main svg, #main img{
-        transform:scale(.3);
-        -webkit-transform:scale(.3);
-        -ms-transform:scale(.3);
-    }
-
-    #main{
-        padding-bottom:50px;
-        height:340px;
-    }
-
-    #main .col-7{
-        padding-top:60px;
-    }
-
-    #main_changer{
-        font-size:36pt;
-    }
-}
 
 /*/////////////////////////////////////////////////////////////////////////////
     Phones
@@ -341,77 +172,38 @@ input, textarea{
         display:none;
     }
 
+    .mobile{
+        display:block;
+    }
+
     .ham{
         @include transition_mixin(fill $base-duration $base-easing);
-        fill:$subtle;
+        fill:$dark-color;
     }
 
     .svg_holder{
         position:absolute;
-        top:-11px;
+        top:25px;
         right:25px;
     }
 
-    header{
+    nav{
+        position:absolute;
         @include transition_mixin(max-height $base-duration $base-easing);
-        max-height:62px;
+        max-height:0px;
         position:absolute;
         z-index:2;
+        overflow:hidden;
     }
 
-    header h1{
-        font-size:16pt;
+    h1{
+        font-size:$large;
+        margin-bottom:$large;   
     }
 
-    header .stretch-12{
-        font-size:14pt;
-        text-align:center;
-        padding-top:8px;
-        margin-top:12px;
-        padding-bottom:8px;
-        width:100%;
-    }
-
-    header .stretch-12:last-of-type{
-        margin-top:12px;
-        padding-bottom:20px;
-    }
-
-    #services .stretch-12 img{
-        width:50%;
-        margin-left:25%;
-    }
-
-    #main{
-        height:300px;
-    }
-
-    #main .col-7{
-        padding-top:60px;
-    }
-
-    #main_changer{
-        font-size:30pt;
-    }
-
-    #main svg, #main img{
-        transform:scale(.25);
-        -webkit-transform:scale(.25);
-        -ms-transform:scale(.25);
-
-
-        top:25px;
-        height:100px;
-        overflow:visible;
-    }
-
-    .contact .row{
-        padding-top:5px;
-        padding-bottom:10px;
-    }   
-
-    .contact{
-        padding-top:90px;
+    h2{
+        font-size:$medium;
+        margin-bottom:$extra-small;
     }
 }
 

@@ -3,7 +3,7 @@
 					
 					if ($digital === true){
 						echo '
-							<div class="controls">
+							<div class="desktop controls">
 								<span class="close"></span>
 								<span class="minimize"></span>
 								<span class="maximize"></span>

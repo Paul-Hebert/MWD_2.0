@@ -54,11 +54,6 @@ table {
 /*/////////////////////////////////////////////////////////////////////////////
     Animation
 //////////////////////////////////////////////////////////////////////////////*/
-.stripes, #work:before, #call_to_action:before, body:after, header:before {
-  height: 5pt;
-  width: 100%;
-  background: repeating-linear-gradient(to right, #70BBA8, #70BBA8 33.33333%, #0C3D56 33.33333%, #0C3D56 66.66666%, #F5885F 66.66666%, #F5885F 99.99999%); }
-
 .row {
   clear: both;
   margin: 0 auto;
@@ -148,31 +143,12 @@ p {
 /*/////////////////////////////////////////////////////////////////////////////
     Work
 //////////////////////////////////////////////////////////////////////////////*/
-#work, #call_to_action {
-  padding-top: 90px; }
-  #work:before, #call_to_action:before {
-    content: ' ';
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px; }
-
-#call_to_action {
-  position: relative;
-  z-index: 15; }
-
 #work {
-  margin-top: 90px; }
+  padding-top: 90px; }
 
 #work h1 {
   text-align: center;
   width: 100%; }
-
-#work .row:first-of-type {
-  padding-top: 30px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
 
 #work .row {
   background: #F0F0F0;
@@ -184,7 +160,6 @@ p {
   -webkit-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
   -moz-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
   box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
-  z-index: 10;
   position: relative; }
   #work .row:before {
     -webkit-box-shadow: 0px 0px 15px 12px rgba(50, 50, 50, 0.3);
@@ -196,35 +171,19 @@ p {
     right: 0px;
     bottom: 0px;
     content: ' '; }
-
-.workExample {
-  position: relative;
-  bottom: -15px;
-  -o-transition: bottom 250ms ease-in-out;
-  -ms-transition: bottom 250ms ease-in-out;
-  -webkit-transition: bottom 250ms ease-in-out;
-  transition: bottom 250ms ease-in-out; }
-  .workExample:hover {
-    bottom: -5px; }
-  .workExample img {
+  #work .row img {
     width: 100%; }
-  .workExample .controls {
-    background: #ccc;
-    height: 20px;
-    padding-left: 5px;
-    -o-border-radius: 10px 10px 0px 0px;
-    -ms-border-radius: 10px 10px 0px 0px;
-    -webkit-border-radius: 10px 10px 0px 0px;
-    border-radius: 10px 10px 0px 0px; }
-    .workExample .controls span {
-      background: #F0F0F0;
-      -o-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      width: 8px;
-      height: 8px;
-      display: inline-block; }
+
+#work .row:first-of-type {
+  padding-top: 30px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+#work .row:last-of-type {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
 
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -233,40 +192,30 @@ p {
 //////////////////////////////////////////////////////////////////////////////*/
 * {
   font-family: Open Sans, sans-serif;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 1; }
+  box-sizing: border-box; }
 
 body {
-  background: #F0F0F0;
   font-family: Open Sans, sans-serif;
-  margin: 0 auto;
-  min-height: 100vh;
-  position: relative; }
-  body:after {
-    content: ' ';
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: -10px; }
+  background: #F0F0F0; }
 
 .button {
   font-size: 16pt;
   background: #0C3D56;
   color: #F0F0F0;
   padding: 5px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
   -o-border-radius: 5px;
-  top: 30px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   padding: 20px 30px;
-  display: inline-block;
+  margin-top: 30px;
   border: 0px;
   cursor: pointer;
-  -o-transition: all 250ms ease-in-out;
-  -ms-transition: all 250ms ease-in-out;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out; }
+  display: inline-block;
+  -o-transition: background 250ms ease-in-out;
+  -ms-transition: background 250ms ease-in-out;
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out; }
 
 .button:hover {
   background: #166993; }
@@ -275,82 +224,47 @@ body {
     header
 //////////////////////////////////////////////////////////////////////////////*/
 header {
-  padding: 34pt;
+  padding: 16pt;
   width: 100%; }
   header h1 {
     display: inline-block; }
-  header:before {
-    content: ' ';
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px; }
   header nav {
     float: right;
     padding-top: 14px; }
     header nav a {
-      font-size: 14pt;
-      color: #000;
-      padding-right: 34pt; }
+      color: #0C3D56;
+      font-size: 13pt;
+      padding-left: 34pt;
+      -o-transition: color 250ms ease-in-out;
+      -ms-transition: color 250ms ease-in-out;
+      -webkit-transition: color 250ms ease-in-out;
+      transition: color 250ms ease-in-out; }
+      header nav a:hover {
+        color: #166993; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Main
 //////////////////////////////////////////////////////////////////////////////*/
-#main * {
-  position: relative; }
-
-#main [class^="col-"] {
-  float: right; }
-
-#main p {
-  font-size: 16pt;
-  padding-bottom: 0px; }
-
-#main_changer {
-  font-size: 34pt;
-  font-style: italic; }
-
-#main svg, #main img {
-  transform: scale(0.45);
-  -webkit-transform: scale(0.45);
-  -ms-transform: scale(0.45);
-  transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  -ms-transform-origin: 0 0; }
-
-svg .filled {
-  fill: #F0F0F0; }
-
-path {
-  stroke: #F5885F;
-  opacity: 0; }
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Contact
-//////////////////////////////////////////////////////////////////////////////*/
-form {
-  padding-bottom: 90px; }
-
-form div {
-  position: relative;
-  padding-bottom: 20px; }
-
-.contact h3 {
-  font-size: 36pt;
-  padding-bottom: 20px; }
-
-form .row {
-  padding-top: 15px; }
-
-label {
-  padding-bottom: 5px; }
-
-label, input, textarea {
-  font-size: 20px;
-  padding: 3px; }
-
-input, textarea {
-  font-family: Open Sans; }
+#main {
+  border-bottom: 2px solid #0C3D56;
+  padding-top: 0px;
+  padding-bottom: 30px; }
+  #main * {
+    position: relative; }
+  #main p {
+    font-size: 16pt;
+    padding-bottom: 0px;
+    padding-top: 45%; }
+  #main #main_changer {
+    font-size: 34pt;
+    font-style: italic; }
+  #main svg, #main img {
+    width: 100%; }
+    #main svg .filled, #main img .filled {
+      fill: #F0F0F0; }
+    #main svg path, #main img path {
+      stroke: #F5885F;
+      opacity: 0; }
 
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -358,121 +272,44 @@ input, textarea {
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////
-    Large screens
-//////////////////////////////////////////////////////////////////////////////*/
-@media (min-width: 1230px) {
-  #main svg, #main img {
-    transform: scale(0.55);
-    -webkit-transform: scale(0.55);
-    -ms-transform: scale(0.55);
-    top: -50px; }
-
-  header a {
-    font-size: 16pt; }
-
-  header h1 {
-    font-size: 30pt; } }
-@media (max-width: 1000px) {
-  #main svg, #main img {
-    transform: scale(0.4);
-    -webkit-transform: scale(0.4);
-    -ms-transform: scale(0.4); }
-
-  header a {
-    font-size: 12pt; } }
-/*/////////////////////////////////////////////////////////////////////////////
     Small computer screens
 //////////////////////////////////////////////////////////////////////////////*/
 @media (min-width: 701px) {
-  #main {
-    padding-bottom: 50px;
-    height: 440px; }
+  .mobile {
+    display: none; }
 
-  #main .col-7 {
-    padding-top: 120px; }
+  #header {
+    padding: 34pt; }
 
   #work .row:nth-of-type(even) [class^="col-"] {
     float: right; }
 
-  .mobile {
-    display: none; }
-
-  .contactHolder {
-    width: 800px;
-    margin: 0px auto;
-    position: relative; }
-
-  .contact {
-    width: 100%;
-    height: 700px;
+  .workExample {
     position: relative;
-    color: #F0F0F0;
-    font-size: 20px;
-    padding-top: 20px; }
-
-  .contact img, .contact .col-4 {
-    padding-top: 20px; }
-
-  .contact img {
-    width: 100%; }
-
-  .contactForm {
-    position: absolute;
-    left: 70px;
-    top: 80px;
-    width: 70%; }
-
-  input, textarea {
-    border: none;
-    border-bottom: 2px dashed #70BBA8;
-    color: #564F4D;
-    font-size: 20px;
-    padding-top: 5px;
-    z-index: 1; }
-
-  input {
-    padding-bottom: 0px; }
-
-  input:focus, textarea:focus {
-    color: #343434; }
-
-  label {
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
-    color: #343434;
-    width: 22.1153846154%;
-    z-index: 2; }
-
-  textarea {
-    height: 105px;
-    background: url("../imgs/dash.png");
-    line-height: 125%;
-    border: none; }
-
-  .sectionLabel {
-    position: relative;
-    width: 60%;
-    left: 20%;
-    top: -30px; } }
-/*/////////////////////////////////////////////////////////////////////////////
-    Medium screens
-//////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 950px) {
-  #main svg, #main img {
-    transform: scale(0.3);
-    -webkit-transform: scale(0.3);
-    -ms-transform: scale(0.3); }
-
-  #main {
-    padding-bottom: 50px;
-    height: 340px; }
-
-  #main .col-7 {
-    padding-top: 60px; }
-
-  #main_changer {
-    font-size: 36pt; } }
+    bottom: -15px;
+    -o-transition: bottom 250ms ease-in-out;
+    -ms-transition: bottom 250ms ease-in-out;
+    -webkit-transition: bottom 250ms ease-in-out;
+    transition: bottom 250ms ease-in-out; }
+    .workExample:hover {
+      bottom: -5px; }
+    .workExample .controls {
+      background: #ccc;
+      height: 20px;
+      padding-left: 5px;
+      -o-border-radius: 10px 10px 0px 0px;
+      -ms-border-radius: 10px 10px 0px 0px;
+      -webkit-border-radius: 10px 10px 0px 0px;
+      border-radius: 10px 10px 0px 0px; }
+      .workExample .controls span {
+        background: #F0F0F0;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        display: inline-block; } }
 /*/////////////////////////////////////////////////////////////////////////////
     Phones
 //////////////////////////////////////////////////////////////////////////////*/
@@ -484,68 +321,38 @@ input, textarea {
   .desktop {
     display: none; }
 
+  .mobile {
+    display: block; }
+
   .ham {
     -o-transition: fill 250ms ease-in-out;
     -ms-transition: fill 250ms ease-in-out;
     -webkit-transition: fill 250ms ease-in-out;
     transition: fill 250ms ease-in-out;
-    fill: #F0F0F0; }
+    fill: #0C3D56; }
 
   .svg_holder {
     position: absolute;
-    top: -11px;
+    top: 25px;
     right: 25px; }
 
-  header {
+  nav {
+    position: absolute;
     -o-transition: max-height 250ms ease-in-out;
     -ms-transition: max-height 250ms ease-in-out;
     -webkit-transition: max-height 250ms ease-in-out;
     transition: max-height 250ms ease-in-out;
-    max-height: 62px;
+    max-height: 0px;
     position: absolute;
-    z-index: 2; }
+    z-index: 2;
+    overflow: hidden; }
 
-  header h1 {
-    font-size: 16pt; }
+  h1 {
+    font-size: 21pt;
+    margin-bottom: 21pt; }
 
-  header .stretch-12 {
-    font-size: 14pt;
-    text-align: center;
-    padding-top: 8px;
-    margin-top: 12px;
-    padding-bottom: 8px;
-    width: 100%; }
-
-  header .stretch-12:last-of-type {
-    margin-top: 12px;
-    padding-bottom: 20px; }
-
-  #services .stretch-12 img {
-    width: 50%;
-    margin-left: 25%; }
-
-  #main {
-    height: 300px; }
-
-  #main .col-7 {
-    padding-top: 60px; }
-
-  #main_changer {
-    font-size: 30pt; }
-
-  #main svg, #main img {
-    transform: scale(0.25);
-    -webkit-transform: scale(0.25);
-    -ms-transform: scale(0.25);
-    top: 25px;
-    height: 100px;
-    overflow: visible; }
-
-  .contact .row {
-    padding-top: 5px;
-    padding-bottom: 10px; }
-
-  .contact {
-    padding-top: 90px; } }
+  h2 {
+    font-size: 16pt;
+    margin-bottom: 10pt; } }
 
 /*# sourceMappingURL=style.css.map */
