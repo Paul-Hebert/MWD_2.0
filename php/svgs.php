@@ -1,5 +1,4 @@
-	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="1390.545" height="814.46" class="desktop" viewbox="0 0 1390.545 814.46">
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1390.545 814.46">
 		<g  id="websites">
 			<g id="Laptop">
 				<g>

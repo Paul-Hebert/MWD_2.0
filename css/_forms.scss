@@ -1,0 +1,11 @@
+form{
+	width:66%;
+	padding:$extra-large 5%;
+	margin:0 auto;
+
+	input[type=text], textarea{
+		width:100%;
+		margin-top:$extra-small;
+		margin-bottom:$small;
+	}
+}

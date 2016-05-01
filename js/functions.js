@@ -48,11 +48,11 @@ $(function() {
 function load_svgs(){
 	if (screen.width > 700){
 		if (ie === false){
-			$("#main .col-5").load("php/svgs.php", function(){
+			$("#animation_wrapper").load("php/svgs.php", function(){
 				draw_svg( $('#websites path') );
 			});
 		} else{
-			$("#main .col-5").load("php/pngs.php");			
+			$("#animation_wrapper").load("php/pngs.php");			
 		}
 	}
 }
