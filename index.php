@@ -40,7 +40,7 @@
 				include('php/work_row.php');
 
 				$title = 'Blurbb Email Builder';
-				$description = 'Coding HTML emails that look good in all the major email clients, browsers and devices is hard and time consuming. Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. Blurbb is perfect for newsletters and invitations as well as automated and transactional emails.';
+				$description = 'Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content.';
 				$link = 'blurbb/';
 				$img = 'blurbb.png';
 				$button_text = 'Build Your Email';

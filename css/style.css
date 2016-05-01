@@ -140,6 +140,15 @@ p {
   font-family: Open Sans;
   font-size: 13pt; }
 
+form {
+  width: 66%;
+  padding: 34pt 5%;
+  margin: 0 auto; }
+  form input[type=text], form textarea {
+    width: 100%;
+    margin-top: 10pt;
+    margin-bottom: 13pt; }
+
 /*/////////////////////////////////////////////////////////////////////////////
     Work
 //////////////////////////////////////////////////////////////////////////////*/
@@ -152,38 +161,81 @@ p {
 
 #work .row {
   background: #F0F0F0;
-  padding-top: 90px;
-  padding-left: 4.8076923077%;
-  padding-right: 4.8076923077%;
-  padding-bottom: 0px;
+  padding: 34pt 17%;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
   border-bottom: 1px solid #ffffff;
-  -webkit-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
-  -moz-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
-  box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.3);
   position: relative; }
-  #work .row:before {
-    -webkit-box-shadow: 0px 0px 15px 12px rgba(50, 50, 50, 0.3);
-    -moz-box-shadow: 0px 0px 15px 12px rgba(50, 50, 50, 0.3);
-    box-shadow: 0px 0px 15px 12px rgba(50, 50, 50, 0.3);
-    z-index: 0;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    content: ' '; }
-  #work .row img {
-    width: 100%; }
-
-#work .row:first-of-type {
-  padding-top: 30px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
-
-#work .row:last-of-type {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none; }
+  #work .row .details {
+    background: #F0F0F0;
+    width: 85%;
+    margin: 0 auto; }
+  #work .row .workExampleWrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 34pt; }
+    #work .row .workExampleWrapper:before {
+      content: '';
+      -webkit-box-shadow: 0px 15px 35px 17px rgba(50, 50, 50, 0.5);
+      -moz-box-shadow: 0px 15px 35px 17px rgba(50, 50, 50, 0.5);
+      box-shadow: 0px 15px 35px 17px rgba(50, 50, 50, 0.5);
+      position: absolute;
+      bottom: -50px;
+      height: 50px;
+      left: 7%;
+      right: 7%; }
+    #work .row .workExampleWrapper:after {
+      content: '';
+      -webkit-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.2);
+      -moz-box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.2);
+      box-shadow: 0px 0px 7px 5px rgba(50, 50, 50, 0.2);
+      position: absolute;
+      bottom: 0px;
+      width: 86%;
+      left: 7%; }
+    #work .row .workExampleWrapper .workExample {
+      -o-border-radius: 10px 10px 0px 0px;
+      -ms-border-radius: 10px 10px 0px 0px;
+      -webkit-border-radius: 10px 10px 0px 0px;
+      border-radius: 10px 10px 0px 0px;
+      -webkit-box-shadow: 0px 2px 1px 1px rgba(50, 50, 50, 0.05);
+      -moz-box-shadow: 0px 2px 1px 1px rgba(50, 50, 50, 0.05);
+      box-shadow: 0px 2px 1px 1px rgba(50, 50, 50, 0.05);
+      display: block;
+      width: 86%;
+      margin: 0px auto;
+      position: relative;
+      bottom: -15px;
+      -o-transition: bottom 250ms ease-in-out;
+      -ms-transition: bottom 250ms ease-in-out;
+      -webkit-transition: bottom 250ms ease-in-out;
+      transition: bottom 250ms ease-in-out; }
+      #work .row .workExampleWrapper .workExample:hover {
+        bottom: -5px; }
+      #work .row .workExampleWrapper .workExample img {
+        width: 100%; }
+      #work .row .workExampleWrapper .workExample .controls {
+        text-align: left;
+        width: 100%;
+        background: #ccc;
+        height: 20px;
+        padding-left: 5px;
+        -o-border-radius: 10px 10px 0px 0px;
+        -ms-border-radius: 10px 10px 0px 0px;
+        -webkit-border-radius: 10px 10px 0px 0px;
+        border-radius: 10px 10px 0px 0px; }
+        #work .row .workExampleWrapper .workExample .controls span {
+          background: #F0F0F0;
+          -o-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
+          display: inline-block; }
 
 /*/////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -226,8 +278,6 @@ body {
 header {
   padding: 16pt;
   width: 100%; }
-  header h1 {
-    display: inline-block; }
   header nav {
     float: right;
     padding-top: 14px; }
@@ -279,37 +329,7 @@ header {
     display: none; }
 
   #header {
-    padding: 34pt; }
-
-  #work .row:nth-of-type(even) [class^="col-"] {
-    float: right; }
-
-  .workExample {
-    position: relative;
-    bottom: -15px;
-    -o-transition: bottom 250ms ease-in-out;
-    -ms-transition: bottom 250ms ease-in-out;
-    -webkit-transition: bottom 250ms ease-in-out;
-    transition: bottom 250ms ease-in-out; }
-    .workExample:hover {
-      bottom: -5px; }
-    .workExample .controls {
-      background: #ccc;
-      height: 20px;
-      padding-left: 5px;
-      -o-border-radius: 10px 10px 0px 0px;
-      -ms-border-radius: 10px 10px 0px 0px;
-      -webkit-border-radius: 10px 10px 0px 0px;
-      border-radius: 10px 10px 0px 0px; }
-      .workExample .controls span {
-        background: #F0F0F0;
-        -o-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        width: 8px;
-        height: 8px;
-        display: inline-block; } }
+    padding: 34pt; } }
 /*/////////////////////////////////////////////////////////////////////////////
     Phones
 //////////////////////////////////////////////////////////////////////////////*/

@@ -1,23 +1,23 @@
 			<div class="row">
-				<?php echo '<a href="' . $link . '" target="_blank" class="col-7 workExample stretch-12">';
-					
-					if ($digital === true){
-						echo '
-							<div class="desktop controls">
-								<span class="close"></span>
-								<span class="minimize"></span>
-								<span class="maximize"></span>
-							</div>
-						';
-					}
+				<div class="workExampleWrapper">
+					<?php echo '<a href="' . $link . '" target="_blank" class="workExample">';
+						
+						if ($digital === true){
+							echo '
+								<div class="desktop controls">
+									<span class="close"></span>
+									<span class="minimize"></span>
+									<span class="maximize"></span>
+								</div>
+							';
+						}
 
-					echo '<img  alt="' . $title . ' screenshot" src="imgs/thumbs/' . $img .'">'; 
-				?>
-				</a>	
+						echo '<img  alt="' . $title . ' screenshot" src="imgs/thumbs/' . $img .'">'; 
+					?>
+					</a>	
+				</div>
 
-				<div class="col-1 big">&nbsp;</div>	
-
-				<div class="col-4 stretch-12">
+				<div class="details">
 					<h2>
 						<?php echo $title; ?>
 					</h2>
