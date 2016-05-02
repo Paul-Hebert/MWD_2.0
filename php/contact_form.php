@@ -3,16 +3,16 @@
 		Let's work together!
 	</h1>
 	<label for="name">Name:</label>
-	<input type="text" name="name" id="name" placeholder="John Doe"/>
+	<span class="input_wrapper"><input type="text" name="name" id="name" placeholder="John Doe"/></span>
 
 	<label for="email">E-mail:</label>
-	<input type="text" name="email" id="email" placeholder="johndoe@email.com"/>
+	<span class="input_wrapper"><input type="text" name="email" id="email" placeholder="johndoe@email.com"/></span>
 
 	<label for="subject">Subject:</label>
-	<input type="text" name="subject" id="subject" placeholder="Hey!"/>
+	<span class="input_wrapper"><input type="text" name="subject" id="subject" placeholder="Hey!"/></span>
 
 	<label id="textLabel" for="message">Message:&nbsp;</label>
-	<textarea name="message" id="message" placeholder="Hey Paul,"></textarea>
+	<span class="input_wrapper"><textarea name="message" id="message" placeholder="Hey Paul,"></textarea></span>
 
 	<input type="submit" class="button" value="Send" id="send"/>
 </form>
