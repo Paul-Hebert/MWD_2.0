@@ -16,10 +16,9 @@
 
 			<h2>Hey! I'm Paul Hebert.</h2>
 
-			<p>I'm a graphic designer and web developer whose passionate about working at the intersection of design and technology.</p>
-
 			<p>
-				I Build <span id="main_changer">Websites</span>.
+				I'm a graphic designer and web developer whose passionate about working at the intersection of design and technology.
+				I build <span id="main_changer">websites</span>.
 			</p>
 
 			<a href="contact.php" class="button">Get In Touch</a>
@@ -98,7 +97,7 @@
 				$description = 'An interactive timeline showing advances in typographic technology.';
 				$link = 'typographic_timeline/';
 				$img = 'timeline.png';
-				$button_text = 'Learn About Typography';
+				$button_text = 'View the Timeline';
 				$digital = true;
 				include('php/work_row.php');
 

@@ -33,6 +33,10 @@
 
     form, #main, #work .row{
         padding:$small;
+
+        .workExampleWrapper:before{
+            @include shadow(none);
+        }
     }
 
     .ham{

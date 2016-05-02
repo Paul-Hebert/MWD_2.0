@@ -61,6 +61,7 @@ header{
 
     #main_changer{
         font-style:italic;
+        color:$accent;
     }
 
     #animation_wrapper{
@@ -68,14 +69,16 @@ header{
 
         svg, img{
             width:100%;
+            padding:$large;
 
             .filled{
                 fill:$subtle;
             }
 
             path{
-                stroke:$accent-2;
+                stroke:$accent;
                 opacity:0;
+                fill:none;
             }
         }
     }

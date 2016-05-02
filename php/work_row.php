@@ -4,7 +4,7 @@
 						
 						if ($digital === true){
 							echo '
-								<div class="desktop controls">
+								<div class="controls">
 									<span class="close"></span>
 									<span class="minimize"></span>
 									<span class="maximize"></span>

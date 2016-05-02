@@ -43,8 +43,9 @@ form{
     color:$subtle;
     padding:5px;
     @include radius(5px);
-    padding:20px 30px;
-    margin-top:30px;
+    padding:$medium $large;
+    margin-top:$medium;
+    margin-right:$small;
     border:0px;
     cursor:pointer;
     display:inline-block;

@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////////////////////*/
 
 var main = [
-			['Websites','#websites'],
-			['Brands','#branding'],
-			['Businesses','#businesses'],
-			['Relationships','#relationships']
+			['websites','#websites'],
+			['brands','#branding'],
+			['businesses','#businesses'],
+			['relationships','#relationships']
 		];
 
 var main_val = 0;
@@ -49,7 +49,7 @@ $(function() {
 
 function load_svgs(){
 	if (ie === false){
-		$("#animation_wrapper").load("php/svgs.php", function(){
+		$("#animation_wrapper").load("php/svgs2.php", function(){
 			draw_svg( $('#websites path') );
 		});
 	} else{
