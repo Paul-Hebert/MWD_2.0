@@ -2,27 +2,38 @@ form{
 	width:66%;
 	padding:$extra-large 5%;
 	margin:0 auto;
+}
 
-	.input_wrapper{
-		background:$white;
-		margin-top:$extra-small;
-		margin-bottom:$small;
-		display:block;
+.input_wrapper{
+	background:$white;
+	margin-top:$extra-small;
+	margin-bottom:$small;
+	display:block;
+	@include radius(3px);
+
+	input[type=text], textarea{
+		font-size:$small;
+		width:100%;
+		background:transparent;
+		padding:$extra-small;
 		@include radius(3px);
+		border:1px solid $subtle-2;
+		@include transition_mixin(box-shadow 300ms);
+		@include shadow( inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1) );
 
-		input[type=text], textarea{
-			font-size:$small;
-			width:100%;
-			background:transparent;
-			padding:$extra-small;
-			@include radius(3px);
-			border:1px solid $subtle-2;
-			@include transition_mixin(box-shadow 300ms);
-			@include shadow( inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1) );
-
-			&:focus{
-				@include shadow( inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02) );
-			}
+		&.error{
+			@include shadow( inset 0px 0px 3px 1px $error );				
 		}
+
+		&:focus{
+			@include shadow( inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02) );
+		}			
 	}
+}
+
+#error_text{
+	@extend .input_wrapper;
+	padding:$extra-small;
+	@include radius(3px);	
+	color:$error;
 }

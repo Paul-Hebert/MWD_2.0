@@ -144,36 +144,49 @@ form {
   width: 66%;
   padding: 34pt 5%;
   margin: 0 auto; }
-  form .input_wrapper {
-    background: #ffffff;
-    margin-top: 10pt;
-    margin-bottom: 13pt;
-    display: block;
+
+.input_wrapper, #error_text {
+  background: #ffffff;
+  margin-top: 10pt;
+  margin-bottom: 13pt;
+  display: block;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .input_wrapper input[type=text], #error_text input[type=text], .input_wrapper textarea, #error_text textarea {
+    font-size: 13pt;
+    width: 100%;
+    background: transparent;
+    padding: 10pt;
     -o-border-radius: 3px;
     -ms-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px; }
-    form .input_wrapper input[type=text], form .input_wrapper textarea {
-      font-size: 13pt;
-      width: 100%;
-      background: transparent;
-      padding: 10pt;
-      -o-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      border-radius: 3px;
-      border: 1px solid #ccc;
-      -o-transition: box-shadow 300ms;
-      -ms-transition: box-shadow 300ms;
-      -webkit-transition: box-shadow 300ms;
-      transition: box-shadow 300ms;
-      -webkit-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1);
-      -moz-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1);
-      box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1); }
-      form .input_wrapper input[type=text]:focus, form .input_wrapper textarea:focus {
-        -webkit-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02);
-        -moz-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02);
-        box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02); }
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    -o-transition: box-shadow 300ms;
+    -ms-transition: box-shadow 300ms;
+    -webkit-transition: box-shadow 300ms;
+    transition: box-shadow 300ms;
+    -webkit-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1);
+    box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1); }
+    .input_wrapper input[type=text].error, #error_text input[type=text].error, .input_wrapper textarea.error, #error_text textarea.error {
+      -webkit-box-shadow: inset 0px 0px 3px 1px #f11;
+      -moz-box-shadow: inset 0px 0px 3px 1px #f11;
+      box-shadow: inset 0px 0px 3px 1px #f11; }
+    .input_wrapper input[type=text]:focus, #error_text input[type=text]:focus, .input_wrapper textarea:focus, #error_text textarea:focus {
+      -webkit-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02);
+      -moz-box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02);
+      box-shadow: inset 0px 0px 7px 5px rgba(50, 50, 50, 0.02); }
+
+#error_text {
+  padding: 10pt;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #f11; }
 
 /*/////////////////////////////////////////////////////////////////////////////
     Work

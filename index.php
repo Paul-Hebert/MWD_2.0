@@ -147,7 +147,7 @@
 			?>
 		</div>
 
-		<div id="call_to_action">
+		<div>
 			<?php include('php/contact_form.php'); ?>
 		</div>
 

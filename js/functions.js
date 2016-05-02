@@ -38,6 +38,8 @@ $(function() {
 	load_svgs();
 
     setInterval( "switch_main()", main_frequency );
+
+    initialize_contact_form();
 });
 
 
@@ -136,6 +138,46 @@ function shrink_svg(path_array){
 		path.style.strokeDashoffset = length;
 	}
 	return;
+}
+
+function initialize_contact_form(){
+	$( ".contact_form" ).on( "submit", function( event ) {
+	    event.preventDefault();
+
+	    if ( validate() ){
+		    var form_data = $('form').serialize();
+
+		    $.ajax({
+			    type : 'POST',
+			    url : 'php/mailto.php',
+			    data : form_data,
+			    success: function(data){
+			    	$('.contact_form').html(data);
+			    }
+			});
+		}
+	});
+}
+
+function validate(){
+	$('.error').removeClass('error');
+	$('#error_text').remove();
+
+	$('.required').each(function(){
+		if ( $(this).val() === '' || $(this).val() === null || $(this).val() === undefined ){
+			$(this).addClass('error');
+			$(this).change(function(){ $(this).removeClass('error') });
+		}
+	});
+
+	if ( $('.error').length > 0 ){
+		$('<div id="error_text">Please fill out all required fields above. Required fields have a red outline.</div>').insertBefore('input[type=submit]');
+		$('#error_text').slideDown(350);
+
+		return false;
+	} else{
+		return true;
+	}
 }
 
 function toggle(){

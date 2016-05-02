@@ -10,6 +10,9 @@ $headers = 'From: '. $from . "\r\n" .
 
 mail($to, $subject, $message, $headers);
 ?>
-<script>
-window.location = '../index.php';
-</script>
+<h1>Thanks for reaching out!</h2>
+<p>I'll get back to you quickly. In the meantime, is there anything else I can help you with?</p>
+<a class="button" href="#">Do Something</a>
+<a class="button" href="#">Do Something</a>
+<a class="button" href="#">Do Something</a>
+<a class="button" href="#">Do Something</a>
