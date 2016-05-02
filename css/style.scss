@@ -23,31 +23,13 @@ body{
     background:$subtle;
 }
 
-.button{
-    font-size:$medium;
-    background:$dark-color;
-    color:$subtle;
-    padding:5px;
-    @include radius(5px);
-    padding:20px 30px;
-    margin-top:30px;
-    border:0px;
-    cursor:pointer;
-    display:inline-block;
-
-    @include transition_mixin(background $base-duration $base-easing);
-}
-
-.button:hover{
-    background:$hovered;
-}
-
 /*/////////////////////////////////////////////////////////////////////////////
     header
 //////////////////////////////////////////////////////////////////////////////*/
 
 header{
     padding:$medium;
+    padding-bottom:0px;
     width:100%;
 
     nav{
@@ -72,106 +54,31 @@ header{
 //////////////////////////////////////////////////////////////////////////////*/
 
 #main{
-    border-bottom:2px solid $dark-color;
+    padding: $extra-large 22%;    
     padding-top:0px;
-    padding-bottom:30px;
-
-    *{
-        position:relative;
-    }
-
-    p{
-        font-size:$medium;
-        padding-bottom:0px;
-        padding-top:45%;
-    }   
+    padding-bottom:$extra-large;
+    margin:0 auto;
 
     #main_changer{
-        font-size:$extra-large;
         font-style:italic;
     }
 
-    svg, img{
+    #animation_wrapper{
         width:100%;
 
-        .filled{
-            fill:$subtle;
+        svg, img{
+            width:100%;
+
+            .filled{
+                fill:$subtle;
+            }
+
+            path{
+                stroke:$accent-2;
+                opacity:0;
+            }
         }
-
-        path{
-            stroke:$accent-2;
-            opacity:0;
-        }
     }
 }
 
-/*/////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
-    Responsive
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////*/
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Small computer screens
-//////////////////////////////////////////////////////////////////////////////*/
-
-@media (min-width : 701px){
-    .mobile{
-        display:none;
-    } 
-
-    #header{
-        padding:$extra-large;
-    }
-}
-
-
-/*/////////////////////////////////////////////////////////////////////////////
-    Phones
-//////////////////////////////////////////////////////////////////////////////*/
-
-@media (max-width : 700px){
-    .stretch-12{
-        width:95%;
-        margin: 0 auto;
-    }
-
-    .desktop{
-        display:none;
-    }
-
-    .mobile{
-        display:block;
-    }
-
-    .ham{
-        @include transition_mixin(fill $base-duration $base-easing);
-        fill:$dark-color;
-    }
-
-    .svg_holder{
-        position:absolute;
-        top:25px;
-        right:25px;
-    }
-
-    nav{
-        position:absolute;
-        @include transition_mixin(max-height $base-duration $base-easing);
-        max-height:0px;
-        position:absolute;
-        z-index:2;
-        overflow:hidden;
-    }
-
-    h1{
-        font-size:$large;
-        margin-bottom:$large;   
-    }
-
-    h2{
-        font-size:$medium;
-        margin-bottom:$extra-small;
-    }
-}
-
+@import 'mobile';

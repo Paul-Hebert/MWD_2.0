@@ -1,6 +1,5 @@
 form{
-	width:66%;
-	padding:$extra-large 5%;
+	padding: $extra-large 22%;
 	margin:0 auto;
 }
 
@@ -36,4 +35,23 @@ form{
 	padding:$extra-small;
 	@include radius(3px);	
 	color:$error;
+}
+
+.button{
+    font-size:$medium;
+    background:$dark-color;
+    color:$subtle;
+    padding:5px;
+    @include radius(5px);
+    padding:20px 30px;
+    margin-top:30px;
+    border:0px;
+    cursor:pointer;
+    display:inline-block;
+
+    @include transition_mixin(background $base-duration $base-easing);
+}
+
+.button:hover{
+    background:$hovered;
 }

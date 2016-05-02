@@ -48,14 +48,12 @@ $(function() {
 //////////////////////////////////////////////////////////////////////////////*/
 
 function load_svgs(){
-	if (screen.width > 700){
-		if (ie === false){
-			$("#animation_wrapper").load("php/svgs.php", function(){
-				draw_svg( $('#websites path') );
-			});
-		} else{
-			$("#animation_wrapper").load("php/pngs.php");			
-		}
+	if (ie === false){
+		$("#animation_wrapper").load("php/svgs.php", function(){
+			draw_svg( $('#websites path') );
+		});
+	} else{
+		$("#animation_wrapper").load("php/pngs.php");			
 	}
 }
 
@@ -70,12 +68,10 @@ function switch_main(){
 	$('#main_changer').animate({'opacity':0}, duration, function(){
 		$('#main_changer').text(main[main_val][0]).animate({'opacity':1},duration);
 
-		if ($(window).width() > 700){
-			if (ie === false){
-				draw_svg( $(main[main_val][1] + ' path') );
-			} else{
-				draw_png( $(main[main_val][1]) );
-			}
+		if (ie === false){
+			draw_svg( $(main[main_val][1] + ' path') );
+		} else{
+			draw_png( $(main[main_val][1]) );
 		}
 	});
 

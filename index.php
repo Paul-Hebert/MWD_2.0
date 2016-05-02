@@ -11,20 +11,19 @@
 	<body>
 		<?php include('php/header.php') ?>
 
-		<div id="main" class="row desktop">
-			<div class="col-8" id="animation_wrapper"></div>
+		<div id="main" class="row">
+			<div id="animation_wrapper"></div>
 
-			<div class="col-4">
-					<p class="center">
-						I Build 
-					</p>
-					<div id="main_changer" class="center">
-						Websites
-					</div>
-				<div class="center">
-					<a href="contact.php" class="button">Get In Touch</a>
-				</div>
-			</div>
+			<h2>Hey! I'm Paul Hebert.</h2>
+
+			<p>I'm a graphic designer and web developer whose passionate about working at the intersection of design and technology.</p>
+
+			<p>
+				I Build <span id="main_changer">Websites</span>.
+			</p>
+
+			<a href="contact.php" class="button">Get In Touch</a>
+			<a href="Hebert_Resume.pdf" class="button">View My Resume</a>
 		</div>
 
 		<div id="work">	
@@ -99,7 +98,7 @@
 				$description = 'An interactive timeline showing advances in typographic technology.';
 				$link = 'typographic_timeline/';
 				$img = 'timeline.png';
-				$button_text = 'Learn More';
+				$button_text = 'Learn About Typography';
 				$digital = true;
 				include('php/work_row.php');
 

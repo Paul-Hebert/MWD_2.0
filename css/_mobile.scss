@@ -1,0 +1,68 @@
+/*/////////////////////////////////////////////////////////////////////////////
+    Small computer screens
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width : 701px){
+    .mobile{
+        display:none;
+    } 
+
+    #header{
+        padding:$extra-large;
+    }
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////
+    Phones
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media (max-width : 700px){
+    .stretch-12{
+        width:95%;
+        margin: 0 auto;
+    }
+
+    .desktop{
+        display:none;
+    }
+
+    .mobile{
+        display:block;
+    }
+
+    form, #main, #work .row{
+        padding:$small;
+    }
+
+    .ham{
+        @include transition_mixin(fill $base-duration $base-easing);
+        fill:$dark-color;
+    }
+
+    .svg_holder{
+        position:absolute;
+        top:25px;
+        right:25px;
+    }
+
+    nav{
+        position:absolute;
+        @include transition_mixin(max-height $base-duration $base-easing);
+        max-height:0px;
+        position:absolute;
+        z-index:2;
+        overflow:hidden;
+    }
+
+    h1{
+        font-size:$large;
+        margin-bottom:$large;   
+    }
+
+    h2{
+        font-size:$medium;
+        margin-bottom:$extra-small;
+    }
+}
+
