@@ -12,7 +12,7 @@
 							';
 						}
 
-						echo '<img  alt="' . $example[0] . ' screenshot" src="imgs/thumbs/' . $example[3] .'">'; 
+						echo '<img  alt="' . $example[0] . ' screenshot" src="imgs/examples/' . $example[3] .'.png">'; 
 					?>
 					</a>	
 				</div>

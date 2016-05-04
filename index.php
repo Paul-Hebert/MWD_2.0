@@ -31,6 +31,13 @@
 
 			<?php
 				include('php/work.php');
+
+				echo '<div id="thumbnails" class="desktop">';
+					foreach($work as $example){
+						include('php/work_thumbnail.php');
+					}				
+				echo '</div>';
+
 				foreach($work as $example){
 					include('php/work_example.php');
 				}
