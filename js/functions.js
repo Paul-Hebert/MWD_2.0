@@ -37,6 +37,8 @@ if(GetIEVersion() > 0){
 $(function() {
 	load_svgs();
 
+	initialize_work_animations();
+
     setInterval( "switch_main()", main_frequency );
 
     initialize_contact_form();
@@ -57,9 +59,24 @@ function load_svgs(){
 	}
 }
 
+function initialize_work_animations(){
+	console.log(1);
+	$(window).scroll(function(){
+		console.log(2);
+		$('.workExample').each(function(){
+			console.log(3);
+			if( isScrolledIntoView( $(this) ) ){
+				$(this).removeClass('hidden');
+			} else{
+				$(this).addClass('hidden');				
+			}
+		});
+	});
+}
+
+
 function switch_fields(){
 	switch_main();
-	switch_testimonials();
 }
 
 function switch_main(){
@@ -92,7 +109,7 @@ function draw_svg(path_array){
 		path.style.transition = path.style.WebkitTransition = path.style.msTransition = path.style.OTransition = 
 		  'none';
 		// Set up the starting positions
-		path.style.strokeDasharray = length + ' ' + length;
+		path.style.strokeDasharray = parseFloat(length + 60) + ' ' + parseFloat(length + 60);
 		path.style.strokeDashoffset = length;
 		path.style.strokeWidth = stroke_width;
 		// Trigger a layout so styles are calculated & the browser
@@ -188,6 +205,10 @@ function toggle(){
 	}
 }
 
+/*****************************************************************************************************/
+// Borrowed functions
+/*****************************************************************************************************/
+
 function GetIEVersion() {
 	  var sAgent = window.navigator.userAgent;
 	  var Idx = sAgent.indexOf("MSIE");
@@ -197,4 +218,18 @@ function GetIEVersion() {
 	    return 11;
 	  else
 	    return 0;
-	}
+}
+
+// http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
+function isScrolledIntoView(elem) {
+    var $elem = $(elem);
+    var $window = $(window);
+
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}

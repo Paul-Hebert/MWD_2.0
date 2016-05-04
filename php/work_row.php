@@ -1,6 +1,6 @@
 			<div class="row">
 				<div class="workExampleWrapper">
-					<?php echo '<a href="' . $link . '" target="_blank" class="workExample">';
+					<?php echo '<a href="' . $link . '" target="_blank" class="workExample hidden">';
 						
 						if ($digital === true){
 							echo '

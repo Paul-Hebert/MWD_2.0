@@ -14,15 +14,16 @@
 		<div id="main" class="row">
 			<div id="animation_wrapper"></div>
 
-			<h2>Hey! I'm Paul Hebert.</h2>
+			<h2>Hey There!</h2>
 
 			<p>
-				I'm a graphic designer and web developer whose passionate about working at the intersection of design and technology.
+				I'm Paul Hebert, a graphic designer and web developer whose passionate about working at the intersection of design and technology.
 				I build <span id="main_changer">websites</span>.
 			</p>
 
 			<a href="contact.php" class="button">Get In Touch</a>
-			<a href="Hebert_Resume.pdf" class="button">View My Resume</a>
+			<a href="Hebert_Resume.pdf" class="button" target="_BLANK">View My Resume</a>
+			<a href="https://github.com/Paul-Hebert" class="button" target="_BLANK">View My Github</a>	
 		</div>
 
 		<div id="work">	

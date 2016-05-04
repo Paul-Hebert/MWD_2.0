@@ -12,7 +12,7 @@
 	<span class="input_wrapper"><input type="text" class="required" name="subject"/></span>
 
 	<label id="textLabel" for="message">Message:&nbsp;</label>
-	<span class="input_wrapper"><textarea name="message" class="required"></textarea></span>
+	<span class="input_wrapper"><textarea name="message" class="required" rows="4"></textarea></span>
 
 	<input type="submit" class="button" value="Email Me" id="send"/>
 </form>
