@@ -57,14 +57,10 @@
                 position:relative;
                 bottom:-10px;
 
-                @include transition_mixin(bottom $base-duration $base-easing);
-
-                &:hover{
-                    bottom:-3px;
-                }
+                @include transition_mixin(bottom 1000ms $base-easing);
 
                 &.hidden{
-                    bottom:-30px;
+                    bottom:-60px;
                 }
 
                 img{
