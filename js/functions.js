@@ -165,7 +165,9 @@ function initialize_contact_form(){
 			    url : 'php/mailto.php',
 			    data : form_data,
 			    success: function(data){
-			    	$('.contact_form').html(data);
+			    	$('.contact_form *').animate({'opacity':0},300);
+			    	$('.contact_form').append(data);
+			    	$('#success').fadeIn(300);
 			    }
 			});
 		}
@@ -184,7 +186,7 @@ function validate(){
 	});
 
 	if ( $('.error').length > 0 ){
-		$('<div id="error_text">Please fill out all required fields above. Required fields have a red outline.</div>').insertBefore('input[type=submit]');
+		$('<div id="error_text">Please fill out all required fields above. Required fields have an orange outline.</div>').insertBefore('input[type=submit]');
 		$('#error_text').slideDown(350);
 
 		return false;

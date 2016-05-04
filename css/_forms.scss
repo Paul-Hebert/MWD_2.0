@@ -1,6 +1,7 @@
 form{
 	padding: $extra-large 22%;
 	margin:0 auto;
+	position:relative;
 }
 
 .input_wrapper{
@@ -35,6 +36,13 @@ form{
 	padding:$extra-small;
 	@include radius(3px);	
 	color:$error;
+	display:none;
+}
+
+#success{
+	display:none;
+	position:absolute;
+	top:$extra-large;
 }
 
 .button{

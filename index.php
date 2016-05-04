@@ -32,11 +32,12 @@
 			<?php
 				$title = 'Local Branch';
 				$description = 'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.';
-				$link = 'local-branch/';
+				$link = '/local-branch/';
 				$img = 'local-branch.png';
 				$buttons = [
 								[$link,'target="_BLANK"','View the Site'],
-								['local-branch.php','','View Process Work']
+								['local-branch.php','','View Process Work'],
+								['local-branch-video.php','','Watch a Video']								
 							];
 				$digital = true;
 				include('php/work_row.php');
@@ -85,7 +86,7 @@
 
 				$title = 'Colors of the Web';
 				$description = 'A data visualization I created to showcase the colors used by the 10 most popular sites on the web. (As of October 2014)';
-				$link = 'web_colors/';
+				$link = '/web_colors/';
 				$img = 'web_colors.png';
 				$buttons = [
 								[$link,'target="_BLANK"','View the Colors']
@@ -95,7 +96,7 @@
 
 				$title = 'Personal Activity Tracker';
 				$description = '24 people recorded their time spent doing 12 activities over 24 hours. This data visualization allows you to explore the data in a fun, intuitive manner.';
-				$link = 'personal_activity_tracker/';
+				$link = '/personal_activity_tracker/';
 				$img = 'p_a_t.png';
 				$buttons = [
 								[$link,'target="_BLANK"','View the Results']
@@ -105,7 +106,7 @@
 
 				$title = 'Real Time Code Graphing';
 				$description = 'This information visualization helps people to understand how coding works. It writes out the code to draw a graph, using statistics on the code as data.';
-				$link = 'real_time_code_grapher/';
+				$link = '/real_time_code_grapher/';
 				$img = 'code_graph.png';
 				$buttons = [
 								[$link,'target="_BLANK"','Watch the Visualization']
@@ -115,7 +116,7 @@
 
 				$title = 'Typographic Timeline';
 				$description = 'An interactive timeline showing advances in typographic technology.';
-				$link = 'typographic_timeline/';
+				$link = '/typographic_timeline/';
 				$img = 'timeline.png';
 				$buttons = [
 								[$link,'target="_BLANK"','View the Timeline']
@@ -137,7 +138,7 @@
 
 				$title = 'Gridley Grid Generator';
 				$description = 'A tool I built to help web designers generate custom CSS grid systems.';
-				$link = 'gridley/';
+				$link = '/gridley/';
 				$img = 'gridley.png';
 				$buttons = [
 								[$link,'target="_BLANK"','Build Your Grid']
