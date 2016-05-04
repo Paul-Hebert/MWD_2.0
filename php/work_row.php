@@ -24,6 +24,10 @@
 					<p>
 						<?php echo $description; ?>
 					</p>
-					<?php echo'<a href="' . $link . '" class="button">' . $button_text . '</a>'; ?>					
+					<?php 
+						foreach ($buttons as $button) {
+							echo'<a href="' . $button[0] . '" class="button" ' . $button[1] . '>' . $button[2] . '</a>'; 
+						}
+					?>					
 				</div>
 			</div>	

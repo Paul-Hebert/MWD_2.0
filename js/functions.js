@@ -3,10 +3,10 @@
 //////////////////////////////////////////////////////////////////////////////*/
 
 var main = [
-			['websites','#websites'],
-			['brands','#branding'],
-			['businesses','#businesses'],
-			['relationships','#relationships']
+			['websites.','#websites'],
+			['brands.','#branding'],
+			['businesses.','#businesses'],
+			['relationships.','#relationships']
 		];
 
 var main_val = 0;

@@ -68,5 +68,15 @@
         font-size:$medium;
         margin-bottom:$extra-small;
     }
+
+    .button{
+        display:block;
+        text-align:center;
+        margin-right:0px;
+    }
+
+    .controls{
+        display:none;
+    }
 }
 
