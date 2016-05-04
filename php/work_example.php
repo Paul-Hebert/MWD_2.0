@@ -1,8 +1,8 @@
 			<div class="row">
 				<div class="workExampleWrapper">
-					<?php echo '<a href="' . $link . '" target="_blank" class="workExample hidden">';
+					<?php echo '<a href="' . $example[2] . '" target="_blank" class="workExample hidden">';
 						
-						if ($digital === true){
+						if ($example[5] === true){
 							echo '
 								<div class="controls">
 									<span class="close"></span>
@@ -12,20 +12,20 @@
 							';
 						}
 
-						echo '<img  alt="' . $title . ' screenshot" src="imgs/thumbs/' . $img .'">'; 
+						echo '<img  alt="' . $example[0] . ' screenshot" src="imgs/thumbs/' . $example[3] .'">'; 
 					?>
 					</a>	
 				</div>
 
 				<div class="details">
 					<h2>
-						<?php echo $title; ?>
+						<?php echo $example[0]; ?>
 					</h2>
 					<p>
-						<?php echo $description; ?>
+						<?php echo $example[1]; ?>
 					</p>
 					<?php 
-						foreach ($buttons as $button) {
+						foreach ($example[4] as $button) {
 							echo'<a href="' . $button[0] . '" class="button" ' . $button[1] . '>' . $button[2] . '</a>'; 
 						}
 					?>					
