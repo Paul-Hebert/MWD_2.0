@@ -51,7 +51,7 @@ $(function() {
 
 function load_svgs(){
 	if (ie === false){
-		$("#animation_wrapper").load("php/svgs2.php", function(){
+		$("#animation_wrapper").load("php/svgs.php", function(){
 			draw_svg( $('#websites path') );
 		});
 	} else{
