@@ -1,36 +1,19 @@
-<!DOCTYPE html>
+<?php
+	$work = [
+				[
+					'Local Branch',
+					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
+					'/local-branch/',
+					[
+						[$link,'target="_BLANK"','View the Site'],
+						['local-branch.php','','View Process Work'],
+						['local-branch-video.php','','Watch a Video']								
+					],
+					true
+				]
 
-<html>
-	<head>
-		<?php include('php/resources.php'); ?>
-
-		<title>Paul Hebert Designs</title>
-		<META NAME="Description" CONTENT="Mild West Designs is a small graphic design and web development firm based out of Chico, CA."/>
-	</head>
-
-	<body>
-		<?php include('php/header.php') ?>
-
-		<div id="main" class="row">
-			<div id="animation_wrapper"></div>
-
-			<h2>Hey There!</h2>
-
-			<p>
-				I'm Paul Hebert, a graphic designer and web developer whose passionate about working at the intersection of design and technology.
-				I build <span id="main_changer">websites.</span>
-			</p>
-
-			<a href="contact.php" class="button">Get In Touch</a>
-			<a href="Hebert_Resume.pdf" class="button" target="_BLANK">View My Resume</a>
-			<a href="https://github.com/Paul-Hebert" class="button" target="_BLANK">View My Github</a>	
-		</div>
-
-		<div id="work">	
-			<h1>Work</h1>
-
-			<?php
-				$title = 'Local Branch';
+			];
+				/*$title = 'Local Branch';
 				$description = 'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.';
 				$link = '/local-branch/';
 				$img = 'local-branch.png';
@@ -134,7 +117,7 @@
 							];
 				$digital = true;
 				include('php/work_row.php');
-				*/
+				
 
 				$title = 'Gridley Grid Generator';
 				$description = 'A tool I built to help web designers generate custom CSS grid systems.';
@@ -165,7 +148,7 @@
 								[$link,'target="_BLANK"','More Information']
 							];
 				$digital = false;
-				include('php/work_row.php');*/
+				include('php/work_row.php');
 
 				$title = 'Grubaholics';
 				$description = 'Grubaholics is a recipe sharing site that allows fellow food-lovers to find and share recipes.';
@@ -175,18 +158,5 @@
 								[$link,'target="_BLANK"','View Recipes']
 							];
 				$digital = true;
-				include('php/work_row.php');				
-				
-			?>
-		</div>
-
-		<div>
-			<?php include('php/contact_form.php'); ?>
-		</div>
-
-		<?php
-			include('php/footer.php');
-			include('php/scripts.php');
-		?>
-	</body>
-</html>
+				include('php/work_row.php');*/
+?>
