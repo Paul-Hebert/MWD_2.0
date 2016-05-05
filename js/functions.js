@@ -75,9 +75,7 @@ function initialize_work_animations(){
 function initialize_work_thumbnails(){
 	$('.thumbnail').each(function(){
 		$(this).click(function(){
-			document.getElementById( $(this).attr('data-target') ).scrollIntoView({
-				behavior: "smooth"
-			});
+			$('#' + $(this).attr('data-target') ).scrollintoview();
 		});
 	});	
 }
