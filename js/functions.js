@@ -38,6 +38,7 @@ $(function() {
 	load_svgs();
 
 	initialize_work_animations();
+	initialize_work_thumbnails();
 
     setInterval( "switch_main()", main_frequency );
 
@@ -60,11 +61,8 @@ function load_svgs(){
 }
 
 function initialize_work_animations(){
-	console.log(1);
 	$(window).scroll(function(){
-		console.log(2);
 		$('.workExample').each(function(){
-			console.log(3);
 			if( isScrolledIntoView( $(this) ) ){
 				$(this).removeClass('hidden');
 			} else{
@@ -74,6 +72,15 @@ function initialize_work_animations(){
 	});
 }
 
+function initialize_work_thumbnails(){
+	$('.thumbnail').each(function(){
+		$(this).click(function(){
+			document.getElementById( $(this).attr('data-target') ).scrollIntoView({
+				behavior: "smooth"
+			});
+		});
+	});	
+}
 
 function switch_fields(){
 	switch_main();

@@ -1,4 +1,4 @@
-			<div class="row">
+			<?php echo '<div class="row" id="' . str_replace(' ', '_', $example[0]) . '">'; ?>
 				<div class="workExampleWrapper">
 					<?php echo '<a href="' . $example[2] . '" target="_blank" class="workExample hidden">';
 						

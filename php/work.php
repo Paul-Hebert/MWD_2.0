@@ -7,8 +7,7 @@
 					'local-branch',
 					[
 						['/local-branch/','target="_BLANK"','View the Site'],
-						['local-branch.php','','View Process Work'],
-						['local-branch-video.php','','Watch a Video']								
+						['local-branch.php','','View Process Work']								
 					],
 					true
 				],/*
@@ -71,7 +70,7 @@
 						['/personal_activity_tracker/','target="_BLANK"','View the Results']						
 					],
 					true
-				],
+				],/*
 				[
 					'Real Time Code Graphing',
 					'This information visualization helps people to understand how coding works. It writes out the code to draw a graph, using statistics on the code as data.',
@@ -81,7 +80,7 @@
 						['/real_time_code_grapher/','target="_BLANK"','Watch the Visualization']						
 					],
 					true
-				],
+				],*/
 				[
 					'Typographic Timeline',
 					'An interactive timeline showing advances in typographic technology.',

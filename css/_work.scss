@@ -1,5 +1,5 @@
 #work{
-    padding-top:90px;
+    position:relative;
     border-top:1px solid $white;
 
     h1{
@@ -8,7 +8,6 @@
     }
 
     .row{
-        background:$subtle;
         padding: $extra-large 17%;
         width:100%;
         text-align:left;
@@ -17,7 +16,6 @@
         border-bottom:1px solid $white;
 
         .details{
-            background:$subtle;
             width:85%;
             margin:0 auto;
         }
@@ -88,14 +86,12 @@
     }
 
     #thumbnails{
-        width:66%;
-        margin:0 auto;
 
         .thumbnail{
             box-sizing:border-box;
             width:33%;
             display:inline-block;
-            padding:$extra-small;
+            padding:5px;
             position:relative;
             cursor:pointer;
 
@@ -124,6 +120,15 @@
                     opacity:1;
                 }
             }
+        }
+    }
+
+    #table_of_contents{
+        text-align:center;
+
+        li{
+            display:inline-block;
+            padding:15px;
         }
     }
 }
