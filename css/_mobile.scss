@@ -2,13 +2,20 @@
     Small computer screens
 //////////////////////////////////////////////////////////////////////////////*/
 
-@media (min-width : 701px){
+@media (min-width : 801px){
     .mobile{
         display:none;
     } 
 
-    #header{
-        padding:$extra-large;
+
+    nav{
+        position:absolute;
+        top:$extra-large;
+        right:$extra-large;
+    }
+
+    header h1{
+        max-width:66%;
     }
 }
 
@@ -17,7 +24,7 @@
     Phones
 //////////////////////////////////////////////////////////////////////////////*/
 
-@media (max-width : 700px){
+@media (max-width : 800px){
     #menu-toggle{
         position:absolute;
         top:$medium;
@@ -73,12 +80,15 @@
                 width:100%;
                 color:$white;
                 padding-left:0px;
+                padding-top:$extra-small;
+                margin-top:$extra-small;
+                border-top:1px solid $subtle-2;
             }           
         }
     }
 
     .visible-y{
-        max-height:500px;
+        max-height:300px;
     }
 
     .desktop{
