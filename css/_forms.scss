@@ -18,7 +18,7 @@ form{
 		padding:$extra-small;
 		@include radius(3px);
 		border:1px solid $subtle-2;
-		@include transition_mixin(box-shadow 300ms);
+		@include transition_mixin(box-shadow $base-duration $base-easing);
 		@include shadow( inset 0px 0px 7px 5px rgba(50, 50, 50, 0.1) );
 
 		&.error{
@@ -46,6 +46,7 @@ form{
 }
 
 .button{
+	-webkit-appearance: none;
     font-size:$medium;
     background:$dark-color;
     color:$subtle;

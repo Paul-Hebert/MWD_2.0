@@ -11,10 +11,6 @@ $headers = 'From: '. $from . "\r\n" .
 mail($to, $subject, $message, $headers);
 ?>
 <div id="success">
-<h1>Thanks for reaching out!</h2>
-<p>I'll get back to you as soon as possible. In the meantime, is there anything else I can help you with?</p>
-<a class="button" href="#">Do Something</a>
-<a class="button" href="#">Do Something</a>
-<a class="button" href="#">Do Something</a>
-<a class="button" href="#">Do Something</a>
+	<h1>Thanks for reaching out!</h2>
+	<p>I'll get back to you as soon as possible.</p>
 </div>

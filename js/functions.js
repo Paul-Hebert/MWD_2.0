@@ -29,18 +29,25 @@ if(GetIEVersion() > 0){
 	ie = false;
 }
 
-
 /*/////////////////////////////////////////////////////////////////////////////
     Set-Up on load
 //////////////////////////////////////////////////////////////////////////////*/
 
 $(function() {
-	load_svgs();
+	if(screen.width < 500 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+		mobile = true;
+	} else{
+		mobile = false;
+	}
 
-	initialize_work_animations();
-	initialize_work_thumbnails();
+	if (mobile === false){
+		load_svgs();
 
-    setInterval( "switch_main()", main_frequency );
+		initialize_work_animations();
+		initialize_work_thumbnails();
+	} 
+
+	setInterval( "switch_main()", main_frequency );
 
     initialize_contact_form();
 

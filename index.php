@@ -12,7 +12,7 @@
 		<?php include('php/header.php') ?>
 
 		<div id="main" class="row">
-			<div id="animation_wrapper"></div>
+			<div id="animation_wrapper" class="desktop"></div>
 
 			<h2>Hey There!</h2>
 

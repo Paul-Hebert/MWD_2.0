@@ -56,6 +56,10 @@
         }
     }
 
+    #work .row .workExampleWrapper .workExample{
+        bottom:-3px !important; 
+    }
+
     header{
         padding:$medium;
         background:$dark-color;
