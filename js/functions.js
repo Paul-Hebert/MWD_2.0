@@ -11,7 +11,7 @@ var main = [
 
 var main_val = 0;
 
-var duration = 800;
+var duration = 600;
 
 var svg_duration = 2000;
 
@@ -19,7 +19,7 @@ var stroke_width = '3pt';
 
 var cph_changed = false;
 
-var main_frequency = 4500;
+var main_frequency = 3500;
 
 var toggleVal = false;
 
@@ -43,12 +43,42 @@ $(function() {
     setInterval( "switch_main()", main_frequency );
 
     initialize_contact_form();
+
+    initialize_mobile_menu();
 });
 
 
 /*/////////////////////////////////////////////////////////////////////////////
     Functions
 //////////////////////////////////////////////////////////////////////////////*/
+
+function initialize_mobile_menu(){
+	$('#menu-toggle').click(function(){
+		if ( $('#menu-toggle svg').attr('class') === 'open' ){
+			$('#menu-toggle svg').attr('class','');
+			$('#mobile_modal').fadeOut();
+		} else{
+			$('#menu-toggle svg').attr('class','open');
+			$('#mobile_modal').fadeIn();			
+		}
+
+		var first_y = $('.first-line').attr('y2');
+		var last_y = $('.last-line').attr('y2');
+
+		animate(
+	        $('.first-line'), // target jQuery element
+	        { y2: last_y}, // target attributes
+	        300 // optional duration in ms, defaults to 400
+	    );
+		animate(
+	        $('.last-line'), // target jQuery element
+	        { y2: first_y}, // target attributes
+	        300 // optional duration in ms, defaults to 400
+	    );
+
+		$('header nav').toggleClass('visible-y');
+	});
+}
 
 function load_svgs(){
 	if (ie === false){
@@ -239,4 +269,30 @@ function isScrolledIntoView(elem) {
     var elemBottom = elemTop + $elem.height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+// Borrowed animate function works on SVG hamburger icon.
+function animate($el, attrs, speed) {
+    speed = speed || 400;
+    var start = {},
+        timeout = 20,
+        steps = Math.floor(speed/timeout),
+        cycles = steps;
+    
+    $.each(attrs, function(k,v) {
+        start[k] = $el.attr(k);
+    });
+    
+    (function loop() {
+        $.each(attrs, function(k,v) {
+            var pst = (v - start[k])/steps;
+            $el.attr(k, function(i, old) {
+                return +old + pst;
+            });
+        });
+      if ( --cycles )
+          setTimeout(loop, timeout);
+      else
+          $el.attr(attrs);
+    })();
 }

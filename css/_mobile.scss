@@ -18,9 +18,67 @@
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media (max-width : 700px){
-    .stretch-12{
-        width:95%;
-        margin: 0 auto;
+    #menu-toggle{
+        position:absolute;
+        top:$medium;
+        right:$medium;
+        color:$white;
+        cursor:pointer;
+
+        svg{
+            width:30px;
+            fill:none;
+            stroke:$white;
+            stroke-width:5;
+            stroke-linecap:round;
+            stroke-miterlimit:10;
+
+            &:hover{
+                stroke:$white;
+            }
+
+            .middle-line{
+                @include transition_mixin(all 300ms);
+            }
+
+            &.open{
+                .middle-line{
+                    opacity:0;
+                }
+            }
+        }
+    }
+
+    header{
+        padding:$medium;
+        background:$dark-color;
+        
+        h1{
+            color:$white;
+            margin-bottom:0px;
+        }
+
+        nav{
+            background:$dark-color;
+            width:100%;
+            float:none;
+            max-height:0px;
+            overflow:hidden;
+            padding:0px;
+            @include transition_mixin(all 600ms);
+            z-index:10;
+
+            a{
+                display:block;
+                width:100%;
+                color:$white;
+                padding-left:0px;
+            }           
+        }
+    }
+
+    .visible-y{
+        max-height:500px;
     }
 
     .desktop{
@@ -48,15 +106,6 @@
         position:absolute;
         top:25px;
         right:25px;
-    }
-
-    nav{
-        position:absolute;
-        @include transition_mixin(max-height $base-duration $base-easing);
-        max-height:0px;
-        position:absolute;
-        z-index:2;
-        overflow:hidden;
     }
 
     h1{

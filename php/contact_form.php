@@ -1,7 +1,7 @@
 <form class="contact_form" method="post" action="php/mailto.php" id="content" enctype="multipart/form-data">
-	<h1>
+	<h2>
 		Let's work together!
-	</h1>
+	</h2>
 	<label for="name">Name:</label>
 	<span class="input_wrapper"><input type="text" class="required" name="name"/></span>
 

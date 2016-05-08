@@ -4,7 +4,7 @@
 	<head>
 		<?php include('php/resources.php'); ?>
 
-		<title>Contact | Mild West Designs</title>
+		<title>Contact | Paul Hebert Designs</title>
 		<META NAME="Description" CONTENT="Got a project you need help with? Get in touch with Mild West Designs."/>
 	</head>
 
@@ -12,7 +12,6 @@
 		<?php 
 			include('php/header.php');  
 			include('php/contact_form.php');
-			include('php/footer.php'); 
 			include('php/scripts.php'); 
 		?>
 	</body>
