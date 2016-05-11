@@ -39,17 +39,12 @@
 					<img src="imgs/process/local-branch/Hebert_wireframes.png" style="width:300px;display:inline-block;">
 				</a>
 
-				<br><br><br><br><br><br><br>
-				<h3>The Website</h3>					
+				<br><br><br>
+
+				<a href="http://www.localbranch.org" class="button">View the Site</a>		
+
+				<br><br><br>									
 			</div>
-
-			<?php
-				include('php/work.php');
-
-				$example = $work[0];
-
-				include('php/work_example.php');
-			?>	
 		</div>
 
 		<?php
