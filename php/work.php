@@ -6,7 +6,7 @@
 					'/local-branch/',
 					'local-branch',
 					[
-						['/local-branch/','target="_BLANK"','View the Site'],
+						['http://localbranch.org/','target="_BLANK"','View the Site'],
 						['local-branch.php','','View Process Work']								
 					],
 					true

@@ -29,21 +29,18 @@
 				<?php
 					include('php/work.php');
 
-					echo '<div id="thumbnails" class="desktop">';
+					echo '<div id="thumbnails">';
+						$count = 0;
 						foreach($work as $example){
 							include('php/work_thumbnail.php');
+							$count++;
 						}				
 					echo '</div>';
 				?>
 			</div>
-			<?php
-				foreach($work as $example){
-					include('php/work_example.php');
-				}
-			?>
 		</div>
 
-		<div>
+		<div id="contact">
 			<?php include('php/contact_form.php'); ?>
 		</div>
 

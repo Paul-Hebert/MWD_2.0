@@ -44,7 +44,6 @@ $(function() {
 		load_svgs();
 
 		initialize_work_animations();
-		initialize_work_thumbnails();
 	} 
 
 	setInterval( "switch_main()", main_frequency );
@@ -98,23 +97,7 @@ function load_svgs(){
 }
 
 function initialize_work_animations(){
-	$(window).scroll(function(){
-		$('.workExample').each(function(){
-			if( isScrolledIntoView( $(this) ) ){
-				$(this).removeClass('hidden');
-			} else{
-				$(this).addClass('hidden');				
-			}
-		});
-	});
-}
-
-function initialize_work_thumbnails(){
-	$('.thumbnail').each(function(){
-		$(this).click(function(){
-			$('#' + $(this).attr('data-target') ).scrollintoview();
-		});
-	});	
+	$('.workExample').removeClass('hidden');
 }
 
 function switch_fields(){
@@ -262,20 +245,6 @@ function GetIEVersion() {
 	    return 11;
 	  else
 	    return 0;
-}
-
-// http://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
-function isScrolledIntoView(elem) {
-    var $elem = $(elem);
-    var $window = $(window);
-
-    var docViewTop = $window.scrollTop();
-    var docViewBottom = docViewTop + $window.height();
-
-    var elemTop = $elem.offset().top;
-    var elemBottom = elemTop + $elem.height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 // Borrowed animate function works on SVG hamburger icon.
