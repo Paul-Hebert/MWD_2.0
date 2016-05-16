@@ -51,6 +51,8 @@ $(function() {
     initialize_contact_form();
 
     initialize_mobile_menu();
+
+    initialize_process_work();
 });
 
 
@@ -98,6 +100,14 @@ function load_svgs(){
 
 function initialize_work_animations(){
 	$('.workExample').removeClass('hidden');
+}
+
+function initialize_process_work(){
+	$('#process img').click(function(){
+		var src = $(this).attr('src').replace('thumbs','examples');
+
+		$('.workExample img').attr('src',src);
+	});
 }
 
 function switch_fields(){

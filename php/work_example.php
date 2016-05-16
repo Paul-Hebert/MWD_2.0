@@ -1,7 +1,11 @@
 			<?php echo '<div class="row" id="' . str_replace(' ', '_', $example[0]) . '">'; ?>
 				<div class="workExampleWrapper">
-					<?php echo '<a href="' . $example[2] . '" target="_blank" class="workExample hidden">';
-						
+					<?php 
+						if($example[2] != '#'){
+							echo '<a href="' . $example[2] . '" target="_blank" class="workExample hidden">';
+						} else{
+							echo '<div class="workExample hidden">';							
+						}
 						if ($example[5] === true){
 							echo '
 								<div class="controls">
@@ -13,9 +17,24 @@
 						}
 
 						echo '<img  alt="' . $example[0] . ' screenshot" src="imgs/examples/' . $example[3] .'.png">'; 
+						
+						if($example[2] != '#'){
+							echo '</a>';
+						} else{
+							echo '</div>';
+						}
 					?>
-					</a>	
 				</div>
+
+				<?php
+					if ($example[6] !== false){
+						echo '<div id="process">';
+							foreach($example[6] as $process_img){
+								echo '<img  src="imgs/thumbs/' . $process_img . '.png">';
+							}
+						echo '</div>';
+					}
+				?>
 
 				<div class="details">
 					<h2>

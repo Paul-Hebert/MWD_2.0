@@ -78,3 +78,20 @@
         }
     }
 }
+
+#process{
+    position:relative;
+    top:-10px;
+
+    img{
+        height:$extra-large;
+        margin-right:$extra-small;
+        margin-bottom:$extra-small;
+        cursor:pointer;
+        @include transition_mixin(opacity $base-duration $base-easing);
+
+        &:hover{
+            opacity:.9;
+        }
+    }
+}
