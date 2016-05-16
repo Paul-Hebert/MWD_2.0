@@ -2,9 +2,17 @@
 
 <html>
 	<head>
-		<?php include('php/resources.php'); ?>
+		<?php 
+			include('php/resources.php'); 
 
-		<title>Paul Hebert Designs</title>
+			include('php/work.php');
+
+			if (! isset( $_GET['id'] )){
+				echo '<title>Work | Paul Hebert Designs</title>';
+			} else{
+				echo '<title>' . $work[$_GET['id']][0] . '</title>';
+			}
+		?>
 		<META NAME="Description" CONTENT="Mild West Designs is a small graphic design and web development firm based out of Chico, CA."/>
 	</head>
 
@@ -13,7 +21,6 @@
 
 		<div id="work">	
 			<?php
-				include('php/work.php');
 
 				if (! isset( $_GET['id'] )){
 					echo '<div class="row">';
