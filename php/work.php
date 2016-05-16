@@ -35,7 +35,7 @@
 				],*/
 				[
 					'Colors of the Web',
-					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the tools they need to draw their own insights.',
+					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the information they need to draw their own insights.',
 					'/web_colors/',
 					'web_colors',
 					[
@@ -46,7 +46,7 @@
 				],
 				[
 					'Board in Hand',
-					'An e-commerce site selling high quality, hand decorated skateboard decks. Board in Hand sells decks as art pieces as well as complete decks that are ready to ride!',
+					'I painted art on a number of skateboards and then created a simple, playful e-commerce site to allow people to buy the boards as art, or as fully equipped skateboards.',
 					'http://www.boardinhand.com',
 					'board_in_hand',
 					[
@@ -79,11 +79,10 @@
 				],
 				[
 					'T is for Typography',
-					'',
+					'This alphabet book outlines the ABCs of typography. It\'s colorful design attracts readers, while it\'s content will entertain experienced designers as well as novices.',
 					'#',
 					't-is-for-typography',
 					[
-						['t-is-for-typography.php','','More']					
 					],
 					false,
 					['ampersand','f-g','extra-books','t-is-for-typography']
@@ -135,11 +134,10 @@
 				]*/,
 				[
 					'A Feast of the Will',
-					'',
+					'A Feast of the Will is an anthology of poetry by Viola Weinberg. I was lucky enough to have the opportunity to design, print, cut and bind chapbooks useing her beautiful poetry. The simple, yet elegant design allows readers to focus on enjoying Viola\'s work.',
 					'#',
 					'a-feast-of-the-will',
 					[
-						['a-feast-of-the-will.php','','More']					
 					],
 					false,
 					['page-sizing','process-2','digging-up-dirt','a-feast-of-the-will']
