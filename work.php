@@ -16,12 +16,18 @@
 				include('php/work.php');
 
 				if (! isset( $_GET['id'] )){
-					$example = $work[0];
+					echo '<div class="row">';
+					echo '<div id="thumbnails">';
+						$count = 0;
+						foreach($work as $example){
+							include('php/work_thumbnail.php');
+							$count++;
+						}				
+					echo '</div></div>';
 				} else{
 					$example = $work[ $_GET['id'] ];
+					include('php/work_example.php');				
 				}
-
-				include('php/work_example.php');
 			?>
 		</div>
 

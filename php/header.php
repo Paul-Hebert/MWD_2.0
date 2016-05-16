@@ -8,7 +8,8 @@
 	</div>
 
 	<nav>
-		<a href="Hebert_Resume.pdf">Resum&eacute;</a>
+		<a href="work.php">Work</a>		
+		<a href="Hebert_Resume.pdf" target="_BLANK">Resum&eacute;</a>
 		<a href="https://github.com/Paul-Hebert" target="_BLANK">Github</a>	
 		<a href="contact.php">Contact</a>
 	</nav>	

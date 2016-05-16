@@ -35,7 +35,7 @@
 				],*/
 				[
 					'Colors of the Web',
-					'A data visualization I created to showcase the colors used by the 10 most popular sites on the web. (As of October 2014)',
+					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the tools they need to draw their own insights.',
 					'/web_colors/',
 					'web_colors',
 					[
@@ -57,7 +57,7 @@
 				],
 				[
 					'Pixel Perfect LED',
-					'Pixel Perfect LED specializes in renting out the latest LED technology. I developed a brand and visual identity for the company as well as a custom Wordpress theme that allows them to edit their site themselves.',
+					'Pixel Perfect LED’s sleek modern design is united via repetition of three dots representing LED bulbs. The dark background contrasts strongly with this repeated pattern as well as the client’s powerful photography. This focuses potential customers’ attention onto the LED lights and branding, showcasing the attention-grabbing power of their technology.',
 					'http://www.pixelperfectled.com',
 					'pixel',
 					[
@@ -113,7 +113,7 @@
 				],
 				[
 					'Gridley Grid Generator',
-					'A tool I built to help web designers generate custom CSS grid systems.',
+					'Using a minimalist design leads users through the process so that in just a couple of easy steps they can build a CSS grid to fit their needs. Showing a preview of the grid as the user builds it ensures they can build the perfect grid for themselves. Including a guide on how to use these grids allows beginners as well as seasoned developers to quickly generate CSS grids to help give structure to their web designs. ',
 					'/gridley/',
 					'gridley',
 					[
@@ -121,7 +121,7 @@
 					],
 					true,
 					false
-				],
+				]/*,
 				[
 					'Grubaholics',
 					'Grubaholics is a recipe sharing site that allows fellow food-lovers to find and share recipes.',
@@ -132,7 +132,7 @@
 					],
 					true,
 					false
-				],
+				]*/,
 				[
 					'A Feast of the Will',
 					'',
@@ -142,20 +142,18 @@
 						['a-feast-of-the-will.php','','More']					
 					],
 					false,
+					['page-sizing','process-2','digging-up-dirt','a-feast-of-the-will']
+				],
+				[
+					'Pluto\'s Revenge',
+					'In this platformer game you take on the role of an astronaut from Pluto whose ship crashes on an alien planet. Explore the world, battle enemies, and gather parts to repair your ship. This game is still a work in progress. Check back for more levels!',
+					'game_redesign/',
+					'game',
+					[
+						['game_redesign/','','Play the Game']					
+					],
+					true,
 					[]
 				]
 			];
-
-				/* 
-				$title = 'Pluto\'s Revenge';
-				$description = 'In this platformer game you take on the role of an astronaut from Pluto whose ship crashes on an alien planet. Explore the world, battle enemies, and gather parts to repair your ship. This game is still a work in progress. Check back for more levels!';
-				$link = 'game_redesign/';
-				$img = 'game';
-				$buttons = [
-								[$link,'target="_BLANK"','Play the Game']
-							];
-				$digital = true,
-				false;
-				include('php/work_row.php');
-				*/
 ?>
