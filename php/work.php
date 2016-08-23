@@ -18,7 +18,8 @@
 					'http://localbranch.org/',
 					'local-branch',
 					[
-						['http://localbranch.org/','target="_BLANK"','View the Site']
+						['http://localbranch.org/','target="_BLANK"','View the Site'],
+						['https://youtu.be/znK5GNF1ZQc','target="_BLANK"','Promotional Video']
 					],
 					true,
 					['logo_sketches','Hebert_branding','Hebert_persona','Hebert_wireframes','local-branch']
