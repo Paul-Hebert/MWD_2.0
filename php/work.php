@@ -1,9 +1,21 @@
 <?php
 	$work = [
 				[
+					'Flume',
+					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
+					'http://proto.flume.io',
+					'flume-home',
+					[
+						['http://proto.flume.io','target="_BLANK"','View the Site'],
+						['/flume-branding/','target="_BLANK"','View Process Work']
+					],
+					true,
+					['flume-branding','flume-profile','flume-stream','flume-home','flume-data','flume-request']
+				],
+				[
 					'Local Branch',
 					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
-					'/local-branch/',
+					'http://localbranch.org/',
 					'local-branch',
 					[
 						['http://localbranch.org/','target="_BLANK"','View the Site']
@@ -46,7 +58,7 @@
 				],
 				[
 					'Board in Hand',
-					'I painted art on a number of skateboards and then created a simple, playful e-commerce site to allow people to buy the boards as art, or as fully equipped skateboards.',
+					'I painted art on a number of skateboards and then developed an e-commerce site to allow people to buy the boards as art, or as fully equipped skateboards.',
 					'http://www.boardinhand.com',
 					'board_in_hand',
 					[
