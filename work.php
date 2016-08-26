@@ -24,11 +24,19 @@
 
 				if (! isset( $_GET['id'] )){
 					echo '<div class="row">';
-					echo '<div id="thumbnails">';
+					echo '<div class="thumbnails">';
 						$count = 0;
 						foreach($work as $example){
 							include('php/work_thumbnail.php');
 							$count++;
+
+							if ($count == 12){
+								echo '
+								</div>
+								<h1 id="extended">Additional Work</h1>
+								<p>The following projects aren\'t included in my regular portfolio. Some are unfinished. Some are out of date. That said, I thought they might be useful to discuss.</p>
+								<div class="thumbnails">';
+							} 
 						}				
 					echo '</div></div>';
 				} else{

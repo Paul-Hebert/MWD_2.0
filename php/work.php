@@ -1,18 +1,6 @@
 <?php
 	$work = [
 				[
-					'Flume',
-					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
-					'http://proto.flume.io',
-					'flume-home',
-					[
-						['http://proto.flume.io','target="_BLANK"','View the Site'],
-						['/flume-branding/','target="_BLANK"','View Process Work']
-					],
-					true,
-					['flume-branding','flume-profile','flume-stream','flume-home','flume-data','flume-request']
-				],
-				[
 					'Local Branch',
 					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
 					'http://localbranch.org/',
@@ -25,34 +13,34 @@
 					['logo_sketches','Hebert_branding','Hebert_persona','Hebert_wireframes','local-branch']
 				],
 				[
-					'Typographic Timeline',
-					'An interactive timeline showing advances in typographic technology.',
-					'/typographic_timeline/',
-					'timeline',
-					[
-						['/typographic_timeline/','target="_BLANK"','View the Timeline']						
-					],
-					true,
-					false
-				],/*
-				[
-					'Blurbb Email Builder',
-					'Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content.',
-					'blurbb/',
-					'blurbb',
-					[
-						['blurbb/','target="_BLANK"','Build Your Email']								
-					],
-					true,
-					false
-				],*/
-				[
 					'Colors of the Web',
 					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the information they need to draw their own insights.',
 					'/web_colors/',
 					'web_colors',
 					[
 						['/web_colors/','target="_BLANK"','View the Colors']						
+					],
+					true,
+					false
+				],
+				[
+					'Gridley Grid Generator',
+					'Using a minimalist design leads users through the process so that in just a couple of easy steps they can build a CSS grid to fit their needs. Showing a preview of the grid as the user builds it ensures they can build the perfect grid for themselves. Including a guide on how to use these grids allows beginners as well as seasoned developers to quickly generate CSS grids to help give structure to their web designs. It was built using PHP, HTML, CSS and Javascript.',
+					'/gridley/',
+					'gridley',
+					[
+						['/gridley/','target="_BLANK"','Build Your Grid']					
+					],
+					true,
+					false
+				],
+				[
+					'Typographic Timeline',
+					'An interactive timeline showing advances in typographic technology.',
+					'/typographic_timeline/',
+					'timeline',
+					[
+						['/typographic_timeline/','target="_BLANK"','View the Timeline']						
 					],
 					true,
 					false
@@ -124,28 +112,6 @@
 					false
 				],
 				[
-					'Gridley Grid Generator',
-					'Using a minimalist design leads users through the process so that in just a couple of easy steps they can build a CSS grid to fit their needs. Showing a preview of the grid as the user builds it ensures they can build the perfect grid for themselves. Including a guide on how to use these grids allows beginners as well as seasoned developers to quickly generate CSS grids to help give structure to their web designs. ',
-					'/gridley/',
-					'gridley',
-					[
-						['/gridley/','target="_BLANK"','Build Your Grid']					
-					],
-					true,
-					false
-				]/*,
-				[
-					'Grubaholics',
-					'Grubaholics is a recipe sharing site that allows fellow food-lovers to find and share recipes.',
-					'http://www.grubaholics.com',
-					'grubaholics',
-					[
-						['http://www.grubaholics.com','target="_BLANK"','View Recipes']					
-					],
-					true,
-					false
-				]*/,
-				[
 					'A Feast of the Will',
 					'A Feast of the Will is an anthology of poetry by Viola Weinberg. I was lucky enough to have the opportunity to design, print, cut and bind chapbooks useing her beautiful poetry. The simple, yet elegant design allows readers to focus on enjoying Viola\'s work.',
 					'#',
@@ -157,7 +123,7 @@
 				],
 				[
 					'Pluto\'s Revenge',
-					'In this platformer game you take on the role of an astronaut from Pluto whose ship crashes on an alien planet. Explore the world, battle enemies, and gather parts to repair your ship. This game is still a work in progress. Check back for more levels!',
+					'In this platformer game you take on the role of an astronaut from Pluto whose ship crashes on an alien planet. Explore the world, battle enemies, and gather parts to repair your ship. This game is still a work in progress. Check back for more levels! It was built using HTML, CSS and Javascript.',
 					'game_redesign/',
 					'game',
 					[
@@ -165,6 +131,41 @@
 					],
 					true,
 					[]
+				],
+				[
+					'Flume',
+					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard. It was built using PHP, HMTL, CSS, SVGs and Javascript.',
+					'http://proto.flume.io',
+					'flume-home',
+					[
+						['/flume_assets/','target="_BLANK"','View the Site'],
+						['/flume-branding/','target="_BLANK"','View Process Work'],
+						['/flume_assets/style_guide/','target="_BLANK"','Style Guide (WIP)']					
+					],
+					true,
+					['flume-branding','flume-profile','flume-stream','flume-home','flume-data','flume-request']
+				],
+				[
+					'Grubaholics',
+					'Grubaholics is a recipe sharing site that allows fellow food-lovers to find and share recipes. Grubaholics was one of my first large scale side projects. It was made using PHP, mySQL, HTML, CSS and Javascript. It has some useability and security issues.',
+					'http://www.grubaholics.com',
+					'grubaholics',
+					[
+						['http://www.grubaholics.com','target="_BLANK"','View Recipes']					
+					],
+					true,
+					false
+				],
+				[
+					'Blurbb Email Builder',
+					'Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. This interactive prototype was built using PHP, HTML, CSS, and Javascript.',
+					'blurbb/',
+					'blurbb',
+					[
+						['blurbb/','target="_BLANK"','Build Your Email']								
+					],
+					true,
+					false
 				]
 			];
 ?>

@@ -1,10 +1,12 @@
-#work{
-    position:relative;
-
-    h1{
+.thumbnails{
+    h1, p{
         text-align:center;
         width:100%;
     }
+}
+
+#work{
+    position:relative;
 
     .row{
         padding: $large 20%;
@@ -94,4 +96,8 @@
             opacity:.9;
         }
     }
+}
+
+#extended{
+    margin-top:$extra-large;
 }
