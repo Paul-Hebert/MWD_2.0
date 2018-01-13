@@ -17,7 +17,7 @@
 			<h2>Hey There!</h2>
 
 			<p>
-				I'm Paul Hebert, a graphic designer and web developer who is passionate about working at the intersection of design and technology.
+				I'm Paul Hebert, a user experience designer who is passionate about working at the intersection of design and technology.
 				I build <span id="main_changer">websites.</span>
 			</p>
 		</div>
@@ -34,14 +34,6 @@
 						foreach($work as $example){
 							include('php/work_thumbnail.php');
 							$count++;
-
-							if ($count == 12){
-								echo '
-								</div>
-								<h1 id="extended">Additional Work</h1>
-								<p>The following projects aren\'t included in my regular portfolio. Some are unfinished. Some are out of date. That said, I thought they might be useful to discuss.</p>
-								<div class="thumbnails">';
-							} 
 						}				
 					echo '</div>';
 				?>

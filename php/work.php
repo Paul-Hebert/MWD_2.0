@@ -1,8 +1,30 @@
 <?php
 	$work = [
 				[
+					'Colors of the Web',
+					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the information they need to draw their own insights. I scraped the data using PHP, then built the page using PHP, HTML, SCSS, and Javascript.',
+					'/web_colors/',
+					'wc1',
+					[
+						['../web_colors/','target="_BLANK"','View the Colors']						
+					],
+					true,
+					['wc2','wc3','wc1']
+				],
+				[
+					'What Goes Into a Logo Design?',
+					'I recently designed a logo for a small business based out of Portland, Oregon. During the process I created a new interactive display to help the client communicate and experient with logo options. Once the project was complete, I used the same display to create an interactive blog post about the project.',
+					'http://paulhebertdesigns.com/what-goes-into-a-logo-design/',
+					'logo-design',
+					[
+						['http://paulhebertdesigns.com/what-goes-into-a-logo-design/','target="_BLANK"','View The Blog Post']							
+					],
+					true,
+					false
+				],
+				[
 					'Local Branch',
-					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard.',
+					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard. This web app was built using PHP, HTML, SCSS, SVGs and Javascript.',
 					'http://localbranch.org/',
 					'local-branch',
 					[
@@ -13,23 +35,12 @@
 					['logo_sketches','Hebert_branding','Hebert_persona','Hebert_wireframes','local-branch']
 				],
 				[
-					'Colors of the Web',
-					'By displaying the colors used in popular sites in a variety of ways we can glean interesting conclusions about modern trends in web design. Organizing the colors by hue, saturation and value provides viewers with a variety of different ways to view the data. Instead of forcing conclusions upon the user this visualization provides them with the information they need to draw their own insights.',
-					'/web_colors/',
-					'web_colors',
-					[
-						['/web_colors/','target="_BLANK"','View the Colors']						
-					],
-					true,
-					false
-				],
-				[
 					'Gridley Grid Generator',
 					'Using a minimalist design leads users through the process so that in just a couple of easy steps they can build a CSS grid to fit their needs. Showing a preview of the grid as the user builds it ensures they can build the perfect grid for themselves. Including a guide on how to use these grids allows beginners as well as seasoned developers to quickly generate CSS grids to help give structure to their web designs. It was built using PHP, HTML, CSS and Javascript.',
 					'/gridley/',
 					'gridley',
 					[
-						['/gridley/','target="_BLANK"','Build Your Grid']					
+						['../gridley/','target="_BLANK"','Build Your Grid']					
 					],
 					true,
 					false
@@ -40,7 +51,7 @@
 					'/typographic_timeline/',
 					'timeline',
 					[
-						['/typographic_timeline/','target="_BLANK"','View the Timeline']						
+						['../typographic_timeline/','target="_BLANK"','View the Timeline']						
 					],
 					true,
 					false
@@ -73,7 +84,7 @@
 					'/personal_activity_tracker/',
 					'p_a_t',
 					[
-						['/personal_activity_tracker/','target="_BLANK"','View the Results']						
+						['../personal_activity_tracker/','target="_BLANK"','View the Results']						
 					],
 					true,
 					false
@@ -90,23 +101,12 @@
 
 				],
 				[
-					'Picture This',
-					'This custom-built e-commerce site was developed to allow the client to sell photography online. The site has a simple interface for uploading new photos, changing prices, and accurately calculating shipping rates.',
-					'http://www.picturethisphotos.us',
-					'picturethis',
-					[
-						['http://www.picturethisphotos.us','target="_BLANK"','View Photos']							
-					],
-					true,
-					false
-				],
-				[
 					'Real Time Code Graphing',
 					'This information visualization helps people to understand how coding works. It writes out the code to draw a graph, using statistics on the code as data.',
 					'/real_time_code_grapher/',
 					'code_graph',
 					[
-						['/real_time_code_grapher/','target="_BLANK"','Watch the Visualization']						
+						['../real_time_code_grapher/','target="_BLANK"','Watch the Visualization']						
 					],
 					true,
 					false
@@ -127,23 +127,23 @@
 					'game_redesign/',
 					'game',
 					[
-						['game_redesign/','','Play the Game']					
+						['../game_redesign/','','Play the Game']					
 					],
 					true,
 					[]
 				],
-				[
+				/*[
 					'Flume',
-					'Local Branch is a web app that helps Californian home-owners find local plants for their gardens, so that they can save water and money while having a beautiful yard. It was built using PHP, HMTL, CSS, SVGs and Javascript.',
+					'I built a prototype for Flume, a new company seeking investor funding. Flume is a live data-streaming marketplace which connects data-providers with data-consumers. This prototype was built using PHP, HTML, SCSS, and Javascript.',
 					'http://proto.flume.io',
 					'flume-home',
 					[
-						['/flume_assets/','target="_BLANK"','View the Site'],
-						['/flume-branding/','target="_BLANK"','View Process Work'],
-						['/flume_assets/style_guide/','target="_BLANK"','Style Guide (WIP)']					
+						['../flume_assets/','target="_BLANK"','View the Site'],
+						['../flume-branding/','target="_BLANK"','View Process Work'],
+						['../flume_assets/style_guide/','target="_BLANK"','Style Guide (WIP)']					
 					],
 					true,
-					['flume-branding','flume-profile','flume-stream','flume-home','flume-data','flume-request']
+					['flume-branding','flume-profile','flume-stream','flume-home','flume-data','flume-request','flume-home']
 				],
 				[
 					'Grubaholics',
@@ -158,14 +158,14 @@
 				],
 				[
 					'Blurbb Email Builder',
-					'Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. This interactive prototype was built using PHP, HTML, CSS, and Javascript.',
+					'Blurbb is a drag-and-drop email builder that makes it easy to build emails that look beautiful on any device without ever having to touch code. Start with one of our many themes and then customize it to your heart\'s content. This interactive prototype was built using PHP, HTML, SCSS, and Javascript.',
 					'blurbb/',
 					'blurbb',
 					[
-						['blurbb/','target="_BLANK"','Build Your Email']								
+						['../blurbb/','target="_BLANK"','Build Your Email']								
 					],
 					true,
 					false
-				]
+				]*/
 			];
 ?>

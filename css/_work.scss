@@ -1,5 +1,5 @@
 .thumbnails{
-    h1, p{
+    p{
         text-align:center;
         width:100%;
     }
@@ -7,6 +7,11 @@
 
 #work{
     position:relative;
+
+    h1{
+        text-align:center;
+        width:100%;
+    }
 
     .row{
         padding: $large 20%;
@@ -95,6 +100,8 @@
         &:hover{
             opacity:.9;
         }
+
+        border:1px solid $white;
     }
 }
 
