@@ -35,6 +35,17 @@
 					['logo_sketches','Hebert_branding','Hebert_persona','Hebert_wireframes','local-branch']
 				],
 				[
+					'Lorry Ipsum',
+					'A truck themed dummy text generator built using Node, Express, Pug and Sass.',
+					'http://lorryipsum.com/',
+					'lorryipsum',
+					[
+						['http://lorryipsum.com/','target="_BLANK"',"Get Truckin'"]						
+					],
+					true,
+					false
+				],
+				[
 					'Gridley Grid Generator',
 					'Using a minimalist design leads users through the process so that in just a couple of easy steps they can build a CSS grid to fit their needs. Showing a preview of the grid as the user builds it ensures they can build the perfect grid for themselves. Including a guide on how to use these grids allows beginners as well as seasoned developers to quickly generate CSS grids to help give structure to their web designs. It was built using PHP, HTML, CSS and Javascript.',
 					'/gridley/',
@@ -66,7 +77,7 @@
 					],
 					true,
 					false
-				],
+				],/*
 				[
 					'Pixel Perfect LED',
 					'Pixel Perfect LED’s sleek modern design is united via repetition of three dots representing LED bulbs. The dark background contrasts strongly with this repeated pattern as well as the client’s powerful photography. This focuses potential customers’ attention onto the LED lights and branding, showcasing the attention-grabbing power of their technology.',
@@ -77,7 +88,7 @@
 					],
 					true,
 					false
-				],
+				],*/
 				[
 					'Personal Activity Tracker',
 					'24 people recorded their time spent doing 12 activities over 24 hours. This data visualization allows you to explore the data in a fun, intuitive manner.',
