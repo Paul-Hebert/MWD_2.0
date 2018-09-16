@@ -18,7 +18,7 @@
 
 			<p>
 				I'm Paul Hebert, a front end developer and user experience designer who is passionate about working at the intersection of design and technology.
-				Right now I'm living in Portland and working for <a href="https://www.worktrucksolutions.com">Work Truck Solutions</a> as a front end web developer.
+				Right now I'm living in Portland and working for <a href="https://www.worktrucksolutions.com" target="_BLANK">Work Truck Solutions</a> as a front end web developer.
 				I build <span id="main_changer">websites.</span>
 			</p>
 		</div>
