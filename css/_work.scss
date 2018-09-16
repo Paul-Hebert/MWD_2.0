@@ -1,6 +1,12 @@
+.thumbnails{
+    p{
+        text-align:center;
+        width:100%;
+    }
+}
+
 #work{
     position:relative;
-    border-top:1px solid $white;
 
     h1{
         text-align:center;
@@ -8,17 +14,11 @@
     }
 
     .row{
-        padding: $extra-large 17%;
+        padding: $large 20%;
         width:100%;
         text-align:left;
         margin:0 auto;  
         position:relative;
-        border-bottom:1px solid $white;
-
-        .details{
-            width:85%;
-            margin:0 auto;
-        }
 
         .workExampleWrapper{
             overflow:hidden;
@@ -84,51 +84,27 @@
             }
         }
     }
+}
 
-    #thumbnails{
+#process{
+    position:relative;
+    top:-10px;
 
-        .thumbnail{
-            box-sizing:border-box;
-            width:32.7%;
-            display:inline-block;
-            padding:5px;
-            position:relative;
-            cursor:pointer;
+    img{
+        height:$extra-large;
+        margin-right:$extra-small;
+        margin-bottom:$extra-small;
+        cursor:pointer;
+        @include transition_mixin(opacity $base-duration $base-easing);
 
-            img{
-                width:100%;
-                @include shadow(  0px 0px 3px 2px rgba(50, 50, 50, 0.2) );
-                @include transition_mixin(opacity $base-duration $base-easing);
-            }
-
-            .details{
-                position:absolute;
-                top:40%;
-                left:0px;
-                right:0px;
-                text-align:center;
-                opacity:0;
-                @include transition_mixin(opacity $base-duration $base-easing);
-            }
-
-            &:hover{
-                img{
-                    opacity:.2;
-                }
-
-                .details{
-                    opacity:1;
-                }
-            }
+        &:hover{
+            opacity:.9;
         }
-    }
 
-    #table_of_contents{
-        text-align:center;
-
-        li{
-            display:inline-block;
-            padding:15px;
-        }
+        border:1px solid $white;
     }
+}
+
+#extended{
+    margin-top:$extra-large;
 }

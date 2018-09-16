@@ -17,7 +17,7 @@
 			<h2>Hey There!</h2>
 
 			<p>
-				I'm Paul Hebert, a graphic designer and web developer who is passionate about working at the intersection of design and technology.
+				I'm Paul Hebert, a user experience designer who is passionate about working at the intersection of design and technology.
 				I build <span id="main_changer">websites.</span>
 			</p>
 		</div>
@@ -29,21 +29,18 @@
 				<?php
 					include('php/work.php');
 
-					echo '<div id="thumbnails" class="desktop">';
+					echo '<div class="thumbnails">';
+						$count = 0;
 						foreach($work as $example){
 							include('php/work_thumbnail.php');
+							$count++;
 						}				
 					echo '</div>';
 				?>
 			</div>
-			<?php
-				foreach($work as $example){
-					include('php/work_example.php');
-				}
-			?>
 		</div>
 
-		<div>
+		<div id="contact">
 			<?php include('php/contact_form.php'); ?>
 		</div>
 

@@ -61,6 +61,7 @@ header{
     padding-top:0px;
     padding-bottom:$extra-large;
     margin:0 auto;
+    border-bottom:1px solid $white;    
 
     #main_changer{
         font-style:italic;
@@ -85,6 +86,10 @@ header{
             }
         }
     }
+}
+
+#contact{
+    border-top:1px solid $white;
 }
 
 @import 'mobile';
